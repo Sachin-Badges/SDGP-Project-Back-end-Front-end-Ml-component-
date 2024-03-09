@@ -1,0 +1,64 @@
+.button {
+  color: white;
+  width: 150px;
+  height: 35px;
+  box-sizing: 0 0 5px #530b0b, 0 0 20px #530b0b;
+  background-color: red;
+  text-align: center;
+  text-shadow: 0cap;
+  font-weight: bold;
+  font-size: medium;
+  font-style: italic;
+  justify-content: center;
+  align-self: center;
+  width: 300px;
+  text-decoration: transparent;
+}
+.button:hover {
+  box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
+    0 0 200px red, 0 0 400px red, 0 0 800px red, 0 0 1600px red;
+}
+
+.pay_heading {
+  text-align: center;
+  color: white;
+  background-size: auto;
+  font-weight: bold;
+  color: white;
+  background-clip: border-box;
+  background-color: red;
+  font-size: 25px;
+}
+.reg_heading:hover {
+  box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
+    0 0 200px red, 0 0 400px red;
+}
+
+.image1 {
+  justify-content: left;
+  float: left;
+}
+.image2 {
+  justify-content: right;
+  float: right;
+}
+.pay_label {
+  font-weight: bold;
+  color: white;
+
+}
+.pay_input {
+  margin-left: 10px;
+  width: 400px;
+  height: 25px;
+}
+.pay_in_exp {
+  margin-left: 10px;
+  width: 150px;
+  height: 25px;
+}
+.pay_in_zip {
+  margin-left: 10px;
+  width: 150px;
+  height: 25px;
+}
