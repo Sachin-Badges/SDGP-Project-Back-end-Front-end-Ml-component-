@@ -1,8 +1,7 @@
 // pages/app/login.page.tsx
 "use client";
-import styles from './login.module.css';
-import { FormEvent, useState } from 'react';
 import Link from 'next/link';
+import { FormEvent, useState } from 'react';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -18,7 +17,7 @@ const LoginPage = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, password }) // Use 'email' and 'password' instead of 'username'
+        body: JSON.stringify({ email, password })
       });
 
       if (!response.ok) {
@@ -26,35 +25,33 @@ const LoginPage = () => {
       }
 
       const data = await response.json();
-      // Save user data to localStorage or sessionStorage
+     
       localStorage.setItem('user', JSON.stringify(data.user));
 
-      // Redirect to another page or perform any other action after successful login
+      
       window.location.href = '/'; 
     } catch (error) {
       setError('Failed to login. Please check your credentials.');
     }
   };
-
   return (
-    <div className={styles.mainContainer}>
-      <form className={styles.container} onSubmit={handleLogin}>
-        <h1 className={styles.text}>Login</h1>
-        {error && <p className={styles.error}>{error}</p>}
-        <div className={styles.box}>
-          <label htmlFor="email" className={styles.label}>Email: </label>
-          <input type="email" id="email" name="email" className={styles.input} value={email} onChange={(e) => setEmail(e.target.value)} required /><br />
+    <div className="text-center p-10 md:p-20">
+      <form className="bg-gradient-to-br from-red-100 bg-opacity-75 p-8 md:p-20 rounded-md shadow-md w-full">
+        <h1 className="text-white font-bold text-3xl md:text-5xl mb-6 md:mb-10">Login</h1>
+        <div className="mb-4 md:mb-8">
+          <label htmlFor="Username" className="text-black mb-2 md:mb-0 md:mr-4">Username:</label>
+          <input type="text" id="username" name="username" className="p-2 w-full md:w-2/5 text-black" />
         </div>
-        <div className={styles.box}>
-          <label htmlFor="password" className={styles.label}>Password: </label>
-          <input type="password" id="password" name="password" className={styles.input} value={password} onChange={(e) => setPassword(e.target.value)} required /><br />
+        <div className="mb-4 md:mb-8">
+          <label htmlFor="Password" className="text-black mb-2 md:mb-0 md:mr-4">Password:</label>
+          <input type="password" id="password" name="password" className="p-2 w-full md:w-2/5 text-black" />
         </div>
-        <div className={styles.buttonBox}>
-    <button type="submit" style={{ backgroundColor: '#530b0b', color: 'white', padding: '10px 20px', borderRadius: '5px', border: 'none', cursor: 'pointer' }}>Login</button>
-</div>
-        
+        <div className="mt-4">
+          <Link href="/" className="p-2 bg-red-900 text-white rounded-full cursor-pointer pl-6 pr-6 md:pl-10 md:pr-10">
+            Login
+          </Link>
+        </div>
       </form>
-      <p>Don't have an account? <Link href="/register">Register now</Link></p>
     </div>
   );
 };
