@@ -1,3 +1,4 @@
+
 import RootLayout from "../layout";
 import Navbar from "../customerPage/customerNavbar/Navbar";
 import Image from "next/image";
@@ -75,3 +76,72 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+// import RootLayout from "../layout";
+// import Navbar from "../customerPage/customerNavbar/Navbar";
+// import Image from "next/image";
+// import img3 from "../../../public/details.png";
+// import img2 from "../../../public/image2.jpg";
+
+// const ProfilePage = () => {
+//   return (
+//     <RootLayout hideNavbar={true}>
+//       <Navbar />
+
+//       <div className="banner flex flex-col md:flex-row items-center">
+//         <div className="w-full md:w-1/2">
+//           <Image src={img3} alt="sample.img" />
+//         </div>
+//         <div className="bannerText text-left ml-5 w-full md:w-1/2">
+//           <h1 className="main text-4xl font-bold">The Mail Delivery Time Prediction System</h1>
+//           <p className="description text-lg">
+//             You can view all of the relevant details linked with the email you received. Explore detailed information such as the sender's name, delivery date, and any further details. This allows you to find important information about your mails even before they reach your door.
+//           </p>
+//         </div>
+//       </div>
+
+//       <div className="pl-5 pr-6 md:pl-10 bg-white">
+//         <h3 className="my-8 text-white bg-red-900 text-center mt-5 rounded">Customer Profile</h3>
+
+//         <div className="relative flex flex-col md:flex-row justify-center items-center p-5 ">
+//           <div className="absolute top-6.5 left-6.5 md:w-87 md:h-87 bg-red-900 opacity-50 rounded hidden md:block"></div>
+//           <Image src={img2} alt="sample2.img" className="imageTwo rounded mb-5 md:mb-0 md:mr-5 md:pb-5 md:w-1/2" />
+
+//           <form className="w-full max-w-md">
+//             <div className="pb-3">
+//               <label htmlFor="Username" className="label text-white font-bold text-2xl block">Username:</label>
+//               <input type="text" name="username" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+
+//             <div className="pb-3">
+//               <label htmlFor="Address" className="label text-white font-bold text-2xl block">Address:</label>
+//               <input type="text" id="Address" name="Address" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+
+//             <div className="pb-3">
+//               <label htmlFor="NIC No" className="label text-white font-bold text-2xl block">NIC No:</label>
+//               <input type="text" id="NIC No" name="NIC No" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+
+//             <div className="pb-3">
+//               <label htmlFor="Longitude" className="label text-white font-bold text-2xl block">Longitude:</label>
+//               <input type="text" id="Longitude" name="Longitude" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+
+//             <div className="pb-3">
+//               <label htmlFor="Latitude" className="label text-white font-bold text-2xl block">Latitude:</label>
+//               <input type="text" id="Latitude" name="Latitude" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+
+//             <div className="pb-3">
+//               <label htmlFor="Contact Number" className="label text-white font-bold text-2xl block">Contact Number:</label>
+//               <input type="text" id="Contact Number" name="Contact Number" className="input rounded bg-gray-300 w-full text-black font-bold pl-3" />
+//             </div>
+//           </form>
+          
+//         </div>
+//       </div>
+//     </RootLayout>
+//   );
+// };
+
+// export default ProfilePage;
