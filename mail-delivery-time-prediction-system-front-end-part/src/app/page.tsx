@@ -3,12 +3,15 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
 import ProjectsSection from "./ProjectsSection";
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const isLocalStorageAvailable = typeof window !== 'undefined' && window.localStorage;
-  const userData = isLocalStorageAvailable ? localStorage.getItem('user') : null;
+  const isLocalStorageAvailable =
+    typeof window !== "undefined" && window.localStorage;
+  const userData = isLocalStorageAvailable
+    ? localStorage.getItem("user")
+    : null;
   return (
     <>
       <div className={styles.container}>
@@ -18,30 +21,28 @@ const Home = () => {
             To establish a user-friendly and accessible application that
             empowers to predict mail delivery time.
           </p>
-          
-    <div className={styles.buttons}>
-            
+          <div className={styles.buttons}>
             {userData ? (
-        <button className={styles.button}>
-        <Link href="/customerPage">Customer Page</Link>
-      </button>
-      
-      ) : (
-        <button className={styles.button}>
-        <Link href="/login">Customer Page</Link>
-      </button>
-      )}
-            {userData ? (
-        <button className={styles.button}>
-        <Link href="/employeePage">Employee Page</Link>
-      </button>
-      
-      ) : (
-        <button className={styles.button}>
-              <Link href="/login">Employee Page</Link>
+              <button className={styles.button}>
+                <Link href="/customerPage">Customer Page</Link>
+              </button>
+            ) : (
+              <button className={styles.button}>
+                <Link href="/login">Customer Page</Link>
+              </button>
+            )}
+            {/* {userData ? (
+              <button className={styles.button}>
+                <Link href="/employeePage">Employee Page</Link>
+              </button>
+            ) : (
+              <button className={styles.button}>
+                <Link href="/login">Employee Page</Link>
+              </button>
+            )} */}
+            <button className={styles.button}>
+              <Link href="/employeePage">Employee Page</Link>
             </button>
-      )}
-
           </div>
           <div className={styles.brands}>
             <Image src="/brands.png" alt="" fill className={styles.brandImg} />
