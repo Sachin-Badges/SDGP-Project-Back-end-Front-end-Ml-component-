@@ -1,0 +1,401 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/customerPage/customerNavbar/links/navLinks/navLink.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+.navLink_container__EqwkS {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.navLink_active__jtk9x {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/customerPage/customerNavbar/links/links.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+.links_links__07_Go {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links_logout__n7YRx {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: aliceblue;
+  color: #000;
+}
+
+.links_menuButton__UNv0V,
+.links_mobileLinks___oOvV {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links_links__07_Go {
+    display: none;
+  }
+
+  .links_menuButton__UNv0V {
+    display: block;
+    cursor: pointer;
+  }
+
+  .links_mobileLinks___oOvV {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/customerPage/customerNavbar/navbar.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+.navbar_container__b4QWd {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar_logo__lpeDW {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/profile/profile.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.profile_container__CYebx{
+  background-color: white;
+  
+}
+.profile_mailTopic__ALthA{
+  color: white;
+  background-color: rgb(54, 3, 3);
+  text-align: center;
+  margin: 5%;
+  border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+  
+  
+}
+.profile_profile__vkE_C{
+  padding-left: 30%;
+}
+.profile_label__fpdK1{
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+.profile_input__JJrVV{
+  border-radius: 10px 10px 10px 10px;
+  background-color:rgb(166, 176, 186);
+  width: 40%;
+}
+.profile_row__Hahct{
+  padding-bottom: 80px;
+}
+.profile_container__CYebx{
+  width: 80%;
+  height: 50%;
+  position: relative;
+  margin-left: 80px;
+  
+}
+.profile_overlay__rVRZE {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3); 
+  z-index: 1;
+}
+
+.profile_background__qOj6O{
+  background-size:cover;
+  
+}
+
+.profile_form__Pq_Ec {
+  position: absolute; 
+  top: 50%; 
+  left: 40%; 
+  transform: translate(-50%, -50%); 
+  z-index: 2; 
+  padding-left: 20%; 
+} 
+
+.profile_formContainer__moxyo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+
+  
+}
+.profile_overlay__rVRZE{
+  position: absolute;
+  top: 6.5%;
+  left: 6.5%;
+  width: 87%;
+  height: 87%;
+  background: rgba(232, 58, 58, 0.5);
+  z-index: 2;
+  border-radius: 5%;
+}
+/* .link{
+  padding: 10px;
+  background-color: rgb(65, 15, 15);
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+} */
+.profile_imageOne__9czZm{
+  width:100%;
+  height: auto;
+  padding-top: 50px;
+}
+.profile_imageTwo__qKdL3{
+  border-radius: 50px;
+}
+.profile_banner__I_o8C{
+  display: flex;
+  padding-top: 60px;
+}
+.profile_main__zHkdw{
+  font-size: 50px;
+  font-weight: bolder;
+  padding-left: 80px;
+}
+.profile_description__8ldAR{
+  font-size: 20px;
+  padding-left: 50px;
+}
+.profile_bannerText__NlVUZ{
+  padding-top: 80px;
+  width: 70%;
+  justify-items: center;
+}
+
+/* @media only screen and (max-width :768px){
+  .container{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .form{
+    left :50%;
+    transform: translate(-50%);
+    padding-left: 10%;
+  }
+  .banner{
+    flex-direction: column;
+    align-items: center;
+
+  }
+} */
+
+/* Default styles for larger screens */
+.profile_container__CYebx {
+  background-color: white;
+  width: 80%;
+  height: 50%;
+  position: relative;
+  margin-left: 80px;
+}
+
+/* Add other default styles... */
+
+/* Media query for screens with a maximum width of 1200px */
+@media only screen and (max-width: 1200px) {
+  .profile_container__CYebx {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .profile_form__Pq_Ec {
+    position: absolute; 
+    top: 10%; 
+    left: 10%; 
+    /* transform: translate(-50%, -50%);  */
+    z-index: 2; 
+    /* padding-left: 20%;  */
+  } 
+
+  /* Add other styles for screens up to 1200px... */
+}
+
+/* Media query for screens with a maximum width of 992px */
+@media only screen and (max-width: 992px) {
+  .profile_container__CYebx {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  /* Add other styles for screens up to 992px... */
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+  .profile_container__CYebx {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profile_form__Pq_Ec {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 10%;
+  }
+
+  .profile_banner__I_o8C {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile_main__zHkdw {
+    font-size: 40px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .profile_description__8ldAR {
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .profile_bannerText__NlVUZ {
+    padding-top: 40px;
+    width: 90%;
+  }
+
+  .profile_profile__vkE_C {
+    padding-left: 10%;
+  }
+
+  /* Add other styles for screens up to 768px... */
+}
+
+/* Media query for screens with a maximum width of 576px */
+@media only screen and (max-width: 576px) {
+  .profile_container__CYebx {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profile_form__Pq_Ec {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 5%;
+  }
+
+  .profile_banner__I_o8C {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile_main__zHkdw {
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .profile_description__8ldAR {
+    font-size: 14px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .profile_bannerText__NlVUZ {
+    padding-top: 30px;
+    width: 95%;
+  }
+
+  .profile_profile__vkE_C {
+    padding-left: 5%;
+  }
+
+  /* Add other styles for screens up to 576px... */
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/navbar/links/navLinks/navLink.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+.navLink_container__qa4tj {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.navLink_active__FHDYD {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/components/navbar/links/links.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.links_links__a8XY9 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.links_logout__rP8jl {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.links_menuButton__myBi1,
+.links_mobileLinks__DFe6Z {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links_links__a8XY9 {
+    display: none;
+  }
+
+  .links_menuButton__myBi1 {
+    display: block;
+    cursor: pointer;
+  }
+
+  .links_mobileLinks__DFe6Z {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 50%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+  }
+}
+
