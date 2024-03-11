@@ -1,27 +1,31 @@
+
 import pickle
-
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 
-#create flask app
-app = Flask(__name__)
+# Create flask app
+app = Flask(_name_)
 
 # Load the model
 model = pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return "Mail Delivery Time Prediction API"
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
+    # Get JSON data from request
+    data = request.json
 
-    float_features = [float(x) for x in request.form.values()]
-    features = [np.array(float_features)]
+    # Convert JSON data to numpy array
+    features = np.array(list(data.values())).reshape(1, -1)
+
+    # Predict delivery time
     prediction = model.predict(features)
 
+    # Return prediction as JSON response
+    return jsonify({'prediction': prediction[0]})
 
-    return render_template('index.html', prediction_text='Time taken for delivery will be {} hours'.format(prediction))
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if _name_ == "_main_":
+    app.run(debug=True, port=5001)

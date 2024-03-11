@@ -1,0 +1,8 @@
+{
+  "/customerPage/page": "app/customerPage/page.js",
+  "/predictionPage/page": "app/predictionPage/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/mailBox/page": "app/mailBox/page.js",
+  "/feedback/page": "app/feedback/page.js",
+  "/page": "app/page.js"
+}
