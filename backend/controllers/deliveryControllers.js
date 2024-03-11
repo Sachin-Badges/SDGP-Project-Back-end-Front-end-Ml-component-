@@ -152,5 +152,8 @@ module.exports = {
     createPrediction,
     getPredictionsByEmail,
     getAllPredictions
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 };
