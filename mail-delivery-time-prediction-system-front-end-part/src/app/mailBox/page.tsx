@@ -4,7 +4,6 @@ import axios from 'axios';
 import Image from "next/image";
 import RootLayout from "../layout";
 import Navbar from "../customerPage/customerNavbar/Navbar";
-import dynamic from 'next/dynamic';
 
 interface PredictionDetail {
   _id: string;
@@ -44,15 +43,10 @@ const fetchAllPredictionDetails = async (email: string) => {
   }
 };
 
-const DynamicNavbar = dynamic(() => import("../customerPage/customerNavbar/Navbar"), {
-  loading: () => null, // Placeholder while Navbar is loading
-  ssr: false, // Disable server-side rendering for the Navbar component
-});
-
 
   return (
     <RootLayout hideNavbar={true}>
-      <DynamicNavbar />
+      <Navbar />
       <section className="lg:py-16">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
           <ul className="divide-y divide-gray-200">

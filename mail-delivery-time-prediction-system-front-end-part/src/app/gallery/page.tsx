@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import RootLayout from "../layout";
 
 const GalleryPage = () => {
   const galleryItems = [
@@ -41,6 +43,7 @@ const GalleryPage = () => {
   ];
 
   return (
+    <RootLayout>
       <section className="lg:py-16">
         <div className="grid grid-cols-3 gap-4">
           {galleryItems.map((item) => (
@@ -66,6 +69,7 @@ const GalleryPage = () => {
           ))}
         </div>
       </section>
+    </RootLayout>
   );
 };
 
