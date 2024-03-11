@@ -142,8 +142,15 @@ const getAllPredictions = async (req, res) => {
 };
 
 module.exports = {
+<<<<<<< Updated upstream
   createDelivery,
   createPrediction,
   getPredictionsByEmail,
   getAllPredictions,
+=======
+    createDelivery,
+    createPrediction,
+    getPredictionsByEmail,
+    getAllPredictions
+>>>>>>> Stashed changes
 };
