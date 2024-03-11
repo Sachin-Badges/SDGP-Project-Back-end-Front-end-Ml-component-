@@ -45,33 +45,90 @@ const fetchAllPredictionDetails = async (email: string) => {
 
 
   return (
+  //   <RootLayout hideNavbar={true}>
+  //     <Navbar />
+  //     <section className="lg:py-16">
+  //       <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+  //         <ul className="divide-y divide-gray-200">
+  //           {predictionDetail.map(prediction => (
+  //             <li key={prediction._id} className="py-4">
+  //               <div className="flex space-x-4">
+  //                 <div className="flex-1">
+  //                   <p className="mt-1 text-sm text-black">{prediction.email_id}</p>
+  //                 </div>
+  //                 <div className="flex-1">
+  //                   <p className="mt-1 text-sm text-black">{prediction.sender_address}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.sender_name}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.delivery_person_name}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.delivery_person_contact}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.received_date}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.prediction_time}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.createdAt}</p>
+  //                   <p className="mt-1 text-sm text-black">{prediction.updatedAt}</p>
+  //                 </div>
+  //               </div>
+  //             </li>
+  //           ))}
+  //         </ul>
+  //       </div>
+
+  //     </section>
+  //   </RootLayout>
+  // );
+ 
     <RootLayout hideNavbar={true}>
       <Navbar />
       <section className="lg:py-16">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-          <ul className="divide-y divide-gray-200">
-            {predictionDetail.map(prediction => (
-              <li key={prediction._id} className="py-4">
-                <div className="flex space-x-4">
-                  <div className="flex-1">
-                    <p className="mt-1 text-sm text-black">{prediction.email_id}</p>
-                  </div>
-                  <div className="flex-1">
-                    <p className="mt-1 text-sm text-black">{prediction.sender_address}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.sender_name}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.delivery_person_name}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.delivery_person_contact}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.received_date}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.prediction_time}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.createdAt}</p>
-                    <p className="mt-1 text-sm text-black">{prediction.updatedAt}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-red-950 text-white">
+              <tr>
+                <th scope="col" className="p-3">
+                  Email ID
+                </th>
+                <th scope="col" className="p-3">
+                  Sender<br/> Address
+                </th>
+                <th scope="col" className="p-3">
+                  Sender Name
+                </th>
+                <th scope="col" className="p-3">
+                  Delivery Person Name
+                </th>
+                <th scope="col" className="p-3">
+                  Delivery Person Contact
+                </th>
+                <th scope="col" className="p-3">
+                  Received Date
+                </th>
+                <th scope="col" className="p-3">
+                  Prediction Time
+                </th>
+                <th scope="col" className="p-3">
+                  Created<br/> At
+                </th>
+                <th scope="col" className="p-3">
+                  Updated<br/> At
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-red-100 divide-y divide-gray-200">
+              {predictionDetail.map(prediction => (
+                <tr key={prediction._id} className="py-4">
+                  <td className="text-sm text-black p-3">{prediction.email_id}</td>
+                  <td className="text-sm text-black p-3">{prediction.sender_address}</td>
+                  <td className="text-sm text-black p-3">{prediction.sender_name}</td>
+                  <td className="text-sm text-black p-3">{prediction.delivery_person_name}</td>
+                  <td className="text-sm text-black p-3">{prediction.delivery_person_contact}</td>
+                  <td className="text-sm text-black p-3">{prediction.received_date}</td>
+                  <td className="text-sm text-black pl-6">{prediction.prediction_time}</td>
+                  <td className="text-sm text-black p-3">{prediction.createdAt}</td>
+                  <td className="text-sm text-black p-3">{prediction.updatedAt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-
       </section>
     </RootLayout>
   );
