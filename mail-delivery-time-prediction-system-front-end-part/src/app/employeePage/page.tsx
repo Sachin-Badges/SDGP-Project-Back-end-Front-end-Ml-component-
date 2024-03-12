@@ -20,7 +20,8 @@ const EmployeePage = () => {
     updatedAt?: string;
   }
 
-  const handleClick = (latitude: string, longitude: string) => {
+  const handleClick = (latitude: string, longitude: string, email : string) => {
+    localStorage.setItem('email', email);
     window.location.href = `/deliveryPage?latitude=${latitude}&longitude=${longitude}`;
   };
 
@@ -118,7 +119,7 @@ const EmployeePage = () => {
                     lineHeight: '1.5',
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Softer shadow
                     cursor: 'pointer' // Change cursor to pointer for better UX
-                  }} onClick={() => handleClick(user.latitude, user.longitude ?? "15.25")}>
+                  }} onClick={() => handleClick(user.latitude, user.longitude ?? "15.25", user.email)}>
                     <div>Email: {user.email}</div>
                     <div>Address: {user.address}</div>
                     <div>Mobile: {user.mobile}</div>
