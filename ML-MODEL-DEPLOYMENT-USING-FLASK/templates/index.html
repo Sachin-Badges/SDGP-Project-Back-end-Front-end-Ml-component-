@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Mail Delivery Time Prediction System </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Delivery_person_Age" placeholder="Delivery_person_Age" required="required" />
+        <input type="text" name="Delivery_person_Ratings" placeholder="Delivery_person_Ratings" required="required" />
+		<input type="text" name="Post_office_latitude" placeholder="Post_office_latitude" required="required" />
+		<input type="text" name="Post_office_longitude" placeholder="Post_office_longitude" required="required" />
+        <input type="text" name="Delivery_location_latitude" placeholder="Delivery_location_latitude" required="required" />
+        <input type="text" name="Delivery_location_longitude" placeholder="Delivery_location_longitude" required="required" />
+        <input type="text" name="Weather_conditions	" placeholder="Weather_conditions	" required="required" />
+        <input type="text" name="Road_traffic_density" placeholder="Road_traffic_density" required="required" />
+        <input type="text" name="Vehicle_condition" placeholder="Vehicle_condition" required="required" />
+        <input type="text" name="Type_of_vehicle" placeholder="Type_of_vehicle" required="required" />
+        <input type="text" name="multiple_deliveries" placeholder="multiple_deliveries" required="required" />
+        <input type="text" name="Festival" placeholder="Festival" required="required" />
+        <input type="text" name="distance" placeholder="distance" required="required" />
+
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
