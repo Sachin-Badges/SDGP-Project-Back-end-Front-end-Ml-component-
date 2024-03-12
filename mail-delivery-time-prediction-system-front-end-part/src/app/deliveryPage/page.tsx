@@ -45,7 +45,7 @@ const DeliveryPage = () => {
         const deliveryTime = flaskApiResponse.prediction;
         console.log("Predicted delivery time:", deliveryTime);
         // Redirect to prediction page with deliveryTime as query parameter
-        window.location.href = /predictionPage?deliveryTime=${deliveryTime};
+        window.location.href = `/predictionPage?deliveryTime=${deliveryTime}`;
       } else {
         console.error("Prediction data not available in the response");
       }
@@ -112,7 +112,7 @@ const DeliveryPage = () => {
 
                 <input
                   type="text"
-                  placeholder="Delivery Person Ratings( 0.0-10.0)"
+                  placeholder="Delivery Person Ratings( 0-10)"
                   name="Delivery_person_Ratings"
                   value={deliveryData.Delivery_person_Ratings}
                   onChange={handleInputChange}

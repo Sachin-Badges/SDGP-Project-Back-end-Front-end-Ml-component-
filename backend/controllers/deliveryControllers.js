@@ -167,3 +167,9 @@ const getAllPredictions = async (req, res) => {
 };
 
 
+module.exports = {
+    createDelivery,
+    createPrediction,
+    getPredictionsByEmail,
+    getAllPredictions
+};
