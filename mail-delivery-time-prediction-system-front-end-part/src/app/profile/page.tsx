@@ -20,10 +20,10 @@ const ProfilePage = () => {
           </h1>
           <p className="description text-lg">
             You can view all of the relevant details linked with the email you
-            received. Explore detailed information such as the sender's name,
-            delivery date, and any further details. This allows you to find
-            important information about your mails even before they reach your
-            door.
+            received. Explore detailed information such as the sender&apos;s
+            name, delivery date, and any further details. This allows you to
+            find important information about your mails even before they reach
+            your door.
           </p>
         </div>
       </div>
@@ -156,6 +156,7 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
 // import RootLayout from "../layout";
 // import Navbar from "../customerPage/customerNavbar/Navbar";
 // import Image from "next/image";
