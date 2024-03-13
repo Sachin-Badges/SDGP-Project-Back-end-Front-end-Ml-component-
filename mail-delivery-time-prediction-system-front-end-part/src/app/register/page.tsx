@@ -7,10 +7,31 @@ import Link from "next/link";
 import { CgEnter } from "react-icons/cg";
 import { Covered_By_Your_Grace } from "next/font/google";
 import { transform } from "next/dist/build/swc";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [error, setError] = useState("");
   const router = useRouter();
+
+  const handleClick = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this details!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Registered!",
+          text: "Your have registered successfully!.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -19,13 +40,12 @@ const Register = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const email = formData.get('Email_Address') as string;
-    const password = formData.get('Password') as string;
-    const address = formData.get('Address') as string;
-    const mobile = formData.get('Contact') as string;
-    const latitude = formData.get('Customer_Latitude') as string;
-    const longitude = formData.get('Customer_Longitude') as string;
-  
+    const email = formData.get("Email_Address") as string;
+    const password = formData.get("Password") as string;
+    const address = formData.get("Address") as string;
+    const mobile = formData.get("Contact") as string;
+    const latitude = formData.get("Customer_Latitude") as string;
+    const longitude = formData.get("Customer_Longitude") as string;
 
     try {
       const res = await fetch("http://localhost:5000/users/register", {
@@ -39,7 +59,7 @@ const Register = () => {
           address,
           mobile,
           latitude,
-          longitude
+          longitude,
         }),
       });
       if (res.status === 400) {
@@ -54,7 +74,6 @@ const Register = () => {
       console.log(error);
     }
   };
-  
 
   // if (sessionStatus === "loading") {
   //   return <h1>Loading...</h1>;
@@ -95,7 +114,7 @@ const Register = () => {
                 name="Username"
                 className={styles.input_box}
                 placeholder="Enter your username"
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -106,7 +125,7 @@ const Register = () => {
                 placeholder="Enter Longitude"
                 name="Customer_Longitude"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             <br />
@@ -121,7 +140,7 @@ const Register = () => {
                 type="Password"
                 name="Password"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -133,7 +152,7 @@ const Register = () => {
                 placeholder="Enter Latitude"
                 name="Customer_Latitude"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             <br />
@@ -148,7 +167,7 @@ const Register = () => {
                 placeholder="Enter your Address"
                 name="Address"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -161,7 +180,7 @@ const Register = () => {
                 placeholder="Enter your Email"
                 name="Email_Address"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             <br />
@@ -174,7 +193,7 @@ const Register = () => {
                 placeholder="Enter your contact number"
                 name="Contact"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -188,7 +207,7 @@ const Register = () => {
                 name="NIC"
                 placeholder="Enter your NIC"
                 className={styles.input_box}
-                style={{ color: 'black' }} 
+                style={{ color: "black" }}
               />
             </label>
             <br />
@@ -198,7 +217,13 @@ const Register = () => {
           </div>
           <div>
             &nbsp;&nbsp;&nbsp;
-            <button type="submit" className={styles.button}>Register</button>
+            <button
+              type="submit"
+              className={styles.button}
+              onClick={() => handleClick()}
+            >
+              Register
+            </button>
             <p className="text-red-600 text-[16px] mb-4">{error && error}</p>
           </div>
           <br />
@@ -277,7 +302,7 @@ const Register = () => {
               See more
             </button>
           </div>
-  
+
           <div
             style={{
               backgroundImage: 'url("/img4d.jpg")',

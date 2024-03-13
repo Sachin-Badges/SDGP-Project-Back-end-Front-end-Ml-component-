@@ -4,8 +4,19 @@ import Image from "next/image";
 import RootLayout from "../layout";
 import Navbar from "@/components/navbar/Navbar";
 import styles from "../styles/Home.module.css";
+import Swal from "sweetalert2";
 
 const PredictionPage = () => {
+  const handleClick = () => {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Email has been sent",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
   const [deliveryTime, setDeliveryTime] = useState("");
 
   interface Prediction {
@@ -97,115 +108,127 @@ const PredictionPage = () => {
         <h1 className="text-black text-2xl font-bold mb-4">
           Predicted Delivery Time: {deliveryTime}
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <form onSubmit={handleFormSubmit} className="space-y-4">
-            <div className="flex flex-col">
-              <label htmlFor="email_id" className="text-black font-bold">
-                Email ID:
-              </label>
-              <input
-                type="text"
-                id="email_id"
-                name="email_id"
-                placeholder="Enter Email ID"
-                value={predictionData.email_id}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="sender_address" className="text-black font-bold">
-                Sender Address:
-              </label>
-              <input
-                type="text"
-                id="sender_address"
-                name="sender_address"
-                placeholder="Enter Sender Address"
-                value={predictionData.sender_address}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="sender_name" className="text-black font-bold">
-                Sender Name:
-              </label>
-              <input
-                type="text"
-                id="sender_name"
-                name="sender_name"
-                placeholder="Enter Sender Name"
-                value={predictionData.sender_name}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label
-                htmlFor="delivery_person_name"
-                className="text-black font-bold"
-              >
-                Delivery Person Name:
-              </label>
-              <input
-                type="text"
-                id="delivery_person_name"
-                name="delivery_person_name"
-                placeholder="Enter Delivery Person Name"
-                value={predictionData.delivery_person_name}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label
-                htmlFor="delivery_person_contact"
-                className="text-black font-bold"
-              >
-                Delivery Person Contact:
-              </label>
-              <input
-                type="text"
-                id="delivery_person_contact"
-                name="delivery_person_contact"
-                placeholder="Enter Delivery Person Contact"
-                value={predictionData.delivery_person_contact}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="received_date" className="text-black font-bold">
-                Received Date:
-              </label>
-              <input
-                type="text"
-                id="received_date"
-                name="received_date"
-                placeholder="Enter Received Date"
-                value={predictionData.received_date}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="prediction_time" className="text-black font-bold">
-                Prediction Time:
-              </label>
-              <input
-                type="text"
-                id="prediction_time"
-                name="prediction_time"
-                placeholder="Enter Prediction Time"
-                value={predictionData.prediction_time}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-              />
-            </div>
+        <div className="mt-4 mx-auto bg-white p-4 rounded-md shadow-md flex flex-col items-center max-w-30">
+          <form
+            onSubmit={handleFormSubmit}
+            className="w-full grid grid-cols-2 gap-4"
+          >
+            <label
+              htmlFor="email_id"
+              className="text-black col-span-1 font-bold"
+            >
+              Email ID:
+            </label>
+            <input
+              type="text"
+              id="email_id"
+              name="email_id"
+              placeholder="Enter Email ID"
+              value={predictionData.email_id}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="sender_address"
+              className="text-black col-span-1 font-bold"
+            >
+              Sender Address:
+            </label>
+            <input
+              type="text"
+              id="sender_address"
+              name="sender_address"
+              placeholder="Enter Sender Address"
+              value={predictionData.sender_address}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="sender_name"
+              className="text-black col-span-1 font-bold"
+            >
+              Sender Name:
+            </label>
+            <input
+              type="text"
+              id="sender_name"
+              name="sender_name"
+              placeholder="Enter Sender Name"
+              value={predictionData.sender_name}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="delivery_person_name"
+              className="text-black col-span-1 font-bold"
+            >
+              Delivery Person Name:
+            </label>
+            <input
+              type="text"
+              id="delivery_person_name"
+              name="delivery_person_name"
+              placeholder="Enter Delivery Person Name"
+              value={predictionData.delivery_person_name}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="delivery_person_contact"
+              className="text-black col-span-1 font-bold"
+            >
+              Delivery Person Contact:
+            </label>
+            <input
+              type="text"
+              id="delivery_person_contact"
+              name="delivery_person_contact"
+              placeholder="Enter Delivery Person Contact"
+              value={predictionData.delivery_person_contact}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="received_date"
+              className="text-black col-span-1 font-bold"
+            >
+              Received Date:
+            </label>
+            <input
+              type="date"
+              id="received_date"
+              name="received_date"
+              placeholder="Enter Received Date"
+              value={predictionData.received_date}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
+
+            <label
+              htmlFor="prediction_time"
+              className="text-black col-span-1 font-bold"
+            >
+              Prediction Time:
+            </label>
+            <input
+              type="text"
+              id="prediction_time"
+              name="prediction_time"
+              placeholder="Enter Prediction Time"
+              value={predictionData.prediction_time}
+              onChange={handleInputChange}
+              className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
+            />
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md focus:outline-none"
+              className="bg-blue-500 text-white px-6 py-3 rounded-md focus:outline-none col-span-2 self-center mt-4"
+              onClick={handleClick}
+              style={{ fontSize: "1.2rem" }}
             >
               Submit Details
             </button>
