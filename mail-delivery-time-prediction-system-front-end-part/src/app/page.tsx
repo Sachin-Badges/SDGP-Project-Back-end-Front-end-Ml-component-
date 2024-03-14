@@ -38,7 +38,7 @@ const Home = () => {
               </button>
             ) : (
               <button className={styles.button}>
-                <Link href="/login">Employee Page</Link>
+                <Link href="/employeeLogin">Employee Page</Link>
               </button>
             )}
           </div>
