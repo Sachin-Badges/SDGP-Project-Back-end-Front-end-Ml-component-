@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Define the User schema with new fields
-const userSchema = new mongoose.Schema(
+const employeeSchema = new mongoose.Schema(
   {
     email: {
       type: String,
@@ -12,19 +12,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    address: {
+    employeeId: {
       type: String,
       required: true,
     },
     mobile: {
-      type: String,
-      required: true,
-    },
-    longitude: {
-      type: String,
-      required: true,
-    },
-    latitude: {
       type: String,
       required: true,
     },
@@ -33,6 +25,6 @@ const userSchema = new mongoose.Schema(
 ); // Add timestamps to automatically add createdAt and updatedAt
 
 // Create the User model
-const Users = mongoose.model("User", userSchema, "users");
+const Employees = mongoose.model("Employee", employeeSchema, "employees");
 
-module.exports = Users;
+module.exports = Employees;
