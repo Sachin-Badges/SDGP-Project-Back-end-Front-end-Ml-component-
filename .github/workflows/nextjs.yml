@@ -1,14 +1,10 @@
-
 name: Next.js CI
 
-  # push:
-  #   branches: ["main"]
-  # on:
 on:
   push:
     branches-ignore: []
   pull_request:
-    branches-ignore: []  
+    branches-ignore: []
 
 jobs:
   lintTest:
@@ -17,16 +13,15 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
-      -  name: Install Dependencies
-         run: |
-           echo "Running Installing Dependencies..."
-           npm install
+      
+      - name: Install Dependencies
+        run: |
+          echo "Running Installing Dependencies..."
+          npm install
 
-      -  name: Run Linting
-     
-     -  name: Install Dependencies
+      - name: Run Linting
         run: |
           echo "Running Linting Tests..."
-          npm run lint    
+          npm run lint
         env:
-         CI: true
+          CI: true
