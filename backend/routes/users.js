@@ -4,7 +4,8 @@ const userController = require("../controllers/userControllers");
 
 // user routes
 router.get("/", userController.getAllUsers);
-router.get("/search", userController.findUsersByAddress);
+router.get("/search/address", userController.findUsersByAddress);
+router.get("/searchByEmail", userController.getUserByEmail);
 router.get("/test", userController.testEndpoint);
 router.post("/register", userController.registerUser);
 router.post("/login", userController.loginUser);
