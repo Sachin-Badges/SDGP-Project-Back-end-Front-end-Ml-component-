@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    steps: # Add this line
     runs-on: ubuntu-latest
 
     steps:
