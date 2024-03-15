@@ -13,17 +13,56 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v2
 
-      - name: Change Directory
-        run: cd SDGP-Project-Back-end-Front-end-Ml-component-\mail-delivery-time-prediction-system-front-end-part
+      - name: Set Working Directory
+        run: |
+          echo "Setting working directory..."
+          cd ${{ github.workspace }}/mail-delivery-time-prediction-system-front-end-part
 
       - name: Install Dependencies
-        run: |
-          echo "Running Installing Dependencies..."
-          npm install
+        run: npm install
 
       - name: Run Linting
-        run: |
-          echo "Running Linting Tests..."
-          npm run lint    
+        run: npm run lint
         env:
           CI: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# name: Next.js CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   lintTest:
+#     name: Lint
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Clone Repository
+#         uses: actions/checkout@v2
+      
+#       - name: Install Dependencies
+#         run: |
+#           echo "Running Installing Dependencies..."
+#           npm install
+
+#       - name: Run Linting
+#         run: |
+#           echo "Running Linting Tests..."
+#           npm run lint    
+#         env:
+#           CI: true
