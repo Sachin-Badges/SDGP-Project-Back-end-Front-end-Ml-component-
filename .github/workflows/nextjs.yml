@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
-      
+
+      - name: Change Directory
+        run: cd mail-delivery-time-prediction-system-front-end-part
+
       - name: Install Dependencies
         run: |
           echo "Running Installing Dependencies..."
