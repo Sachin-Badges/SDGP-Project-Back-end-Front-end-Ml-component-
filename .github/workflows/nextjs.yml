@@ -1,28 +1,28 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
-name: Deploy Next.js site to Pages
 
+name: Next.js CI
+
+  # push:
+  #   branches: ["main"]
+  # on:
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-
+    branches-ignore: []
+  pull_request:
+    branches-ignore: []  
 
 jobs:
   lintTest:
-  name: Lint
-   runs-on: ubuntu-latest
-   steps:
-     - name: Clone Repository
-       uses: actions/checkout@v2
-     -  name: Install Dependencies
-        run: |
-          echo "Running Installing Dependencies..."
-          npm install
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      -  name: Install Dependencies
+         run: |
+           echo "Running Installing Dependencies..."
+           npm install
 
-     -  name: Run Linting
+      -  name: Run Linting
      
      -  name: Install Dependencies
         run: |
@@ -30,25 +30,3 @@ jobs:
           npm run lint    
         env:
          CI: true
-
-# Testing
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
