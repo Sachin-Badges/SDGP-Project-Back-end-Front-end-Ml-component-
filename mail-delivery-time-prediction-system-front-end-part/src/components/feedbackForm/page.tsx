@@ -200,7 +200,13 @@ const FeedbackForm = () => {
           console.log("FAILED...", error);
         }
       );
+
+      // Emojis for user selection
+    const emojis = [ "👍","😊", "👎"];
+
   };
+  
+    
 
   return (
     <div className="relative">
@@ -284,6 +290,24 @@ const FeedbackForm = () => {
             rows={4}
           />
         </div>
+        <div className="mb-4">
+          <label htmlFor="emoji" className="block mb-2 text-white">
+            Select Emoji
+          </label>
+          <div className="flex space-x-4">
+            {emojis.map((emoji, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setSelectedEmoji(emoji)}
+                className={`text-4xl ${selectedEmoji === emoji ? 'text-blue-500' : 'text-gray-400'}`}
+              >
+                {emoji}
+              </button>
+            ))}
+          </div>
+        </div>
+        
         <button
           type="submit"
           className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
