@@ -82,7 +82,7 @@ const findEmployeeByEmployeeId = async (req, res) => {
 
 const loginEmployee = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, employeeId } = req.body;
 
     const employee = await Employees.findOne({ email });
     if (!employee) {
@@ -92,6 +92,17 @@ const loginEmployee = async (req, res) => {
 
     if (!passwordMatch) {
       return res.status(401).json({ message: "Invalid password" });
+    }
+
+    // const employeeIdMatch = await compare(employeeId, employee.employeeId);
+
+    // if (!employeeIdMatch) {
+    //   return res.status(402).json({ message: "Invalid EmployeeId" });
+    // }
+    const employeeIdMatch = employeeId === employee.employeeId;
+
+    if (!employeeIdMatch) {
+      return res.status(402).json({ message: "Invalid EmployeeId" });
     }
 
     res.status(200).json({ message: "Login successful", employee });

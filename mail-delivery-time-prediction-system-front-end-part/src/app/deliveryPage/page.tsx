@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import dynamic from "next/dynamic";
 
 const DeliveryPage = () => {
   const [deliveryData, setDeliveryData] = useState({
@@ -435,4 +436,4 @@ const DeliveryPage = () => {
   );
 };
 
-export default DeliveryPage;
+export default dynamic(() => Promise.resolve(DeliveryPage), { ssr: false });
