@@ -131,7 +131,7 @@ const createPrediction = async (req, res) => {
             from: 'dreamshadesnew@gmail.com',
             to: email_id,
             subject: 'You have received an email',
-            text: `Your prediction data:\n
+            text: `Your Received Mail Data:\n
             Email ID: ${email_id}\n
             Sender Address: ${sender_address}\n
             Sender Name: ${sender_name}\n
