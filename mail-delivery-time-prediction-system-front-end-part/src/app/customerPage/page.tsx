@@ -84,4 +84,4 @@ const CustomerPage = () => {
   );
 };
 
-export default CustomerPage;
+export default dynamic(() => Promise.resolve(CustomerPage), { ssr: false });
