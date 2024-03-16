@@ -5,6 +5,7 @@ import Link from "next/link";
 import ProjectsSection from "./ProjectsSection";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import dynamic from "next/dynamic";
 
 const Home = () => {
   const isLocalStorageAvailable =
@@ -217,4 +218,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default dynamic(() => Promise.resolve(Home), { ssr: false });
