@@ -31,7 +31,10 @@ jobs:
         
 
       - name: Run Linting
-        run: npm run lint
+        run: |
+           ls
+           cd mail-delivery-time-prediction-system-front-end-part
+           npm run lint
         env:
           CI: true
 
