@@ -26,6 +26,7 @@ jobs:
         run: |
           echo "Running Installing Dependencies..."
           ls
+          cd mail-delivery-time-prediction-system-front-end-part
           npm install
         
 
