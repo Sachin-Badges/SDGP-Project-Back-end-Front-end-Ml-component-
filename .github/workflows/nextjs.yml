@@ -20,10 +20,14 @@ jobs:
           ls
           cd mail-delivery-time-prediction-system-front-end-part  
           ls 
-          npm install
+      
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          echo "Running Installing Dependencies..."
+          ls
+          npm install
+        
 
       - name: Run Linting
         run: npm run lint
