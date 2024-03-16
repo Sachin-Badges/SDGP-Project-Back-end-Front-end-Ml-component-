@@ -17,7 +17,9 @@ jobs:
         run: |
           echo "Setting working directory..."
           cd ${{ github.workspace }}
-          ls    
+          ls
+          cd mail-delivery-time-prediction-system-front-end-part  
+          ls 
 
       - name: Install Dependencies
         run: npm install
