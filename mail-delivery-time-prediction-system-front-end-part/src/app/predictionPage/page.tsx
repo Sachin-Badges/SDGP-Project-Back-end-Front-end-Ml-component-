@@ -5,6 +5,7 @@ import RootLayout from "../layout";
 import Navbar from "@/components/navbar/Navbar";
 import styles from "../styles/Home.module.css";
 import Swal from "sweetalert2";
+import dynamic from "next/dynamic";
 
 const PredictionPage = () => {
   const handleClick = () => {
@@ -239,4 +240,4 @@ const PredictionPage = () => {
   );
 };
 
-export default PredictionPage;
+export default dynamic(() => Promise.resolve(PredictionPage), { ssr: false });

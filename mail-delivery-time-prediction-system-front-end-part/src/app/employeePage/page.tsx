@@ -45,7 +45,7 @@ const EmployeePage = () => {
     // Make the API call
     try {
       const response = await fetch(
-        `http://localhost:5000/users/search?address=${searchInput}`
+        `http://localhost:5000/users/search/address?address=${searchInput}`
       );
       const data = await response.json();
       setSearchResults(data);
