@@ -1,5 +1,3 @@
-
-
 // Import the required modules
 const { getAllUsersController } = require("../../controllers/getUsers");
 const Users = require("../../models/users"); // Assuming this is the correct path to the Users module

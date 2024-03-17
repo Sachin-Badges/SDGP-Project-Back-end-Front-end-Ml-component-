@@ -88,20 +88,13 @@ const loginEmployee = async (req, res) => {
     if (!employee) {
       return res.status(404).json({ message: "Employee not found" });
     }
-    const passwordMatch = await bcrypt.compare(password, employee.password);
 
+    const passwordMatch = await bcrypt.compare(password, employee.password);
     if (!passwordMatch) {
       return res.status(401).json({ message: "Invalid password" });
     }
 
-    // const employeeIdMatch = await compare(employeeId, employee.employeeId);
-
-    // if (!employeeIdMatch) {
-    //   return res.status(402).json({ message: "Invalid EmployeeId" });
-    // }
-    const employeeIdMatch = employeeId === employee.employeeId;
-
-    if (!employeeIdMatch) {
+    if (employeeId !== employee.employeeId) {
       return res.status(402).json({ message: "Invalid EmployeeId" });
     }
 
