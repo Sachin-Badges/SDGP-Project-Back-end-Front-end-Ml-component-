@@ -27,5 +27,5 @@ def predict():
     # Return prediction as JSON response
     return jsonify({'prediction': prediction[0]})
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True, port=5001)
