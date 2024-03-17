@@ -175,35 +175,7 @@ X_test = scaler.transform(X_test)
 #Stadarlization :  This method rescales features so that they have a mean of 0 and a standard deviation of 1.
 
 
-from sklearn.model_selection import GridSearchCV, cross_val_score
-from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor
-# import xgboost as xgb
 
-# Find the best model
-models = [
-    LinearRegression(),
-    DecisionTreeRegressor(),
-    RandomForestRegressor(),
-    # xgb.XGBRegressor(),
-]
-
-param_grid = [
-    {},
-    {'max_depth': [3, 5, 7]},
-    {'n_estimators': [100, 200, 300]},
-    # {'n_estimators': [20, 25, 30], 'max_depth': [5, 7, 9]},
-]
-
-for i, model in enumerate(models):
-    grid_search = GridSearchCV(model, param_grid[i], cv=5, scoring='r2')
-    grid_search.fit(X_train, y_train)
-
-    print(f"{model.__class__.__name__}:")
-    print("Best parameters:", grid_search.best_params_)
-    print("Best R2 score:", grid_search.best_score_)
-    print()
 
 #Model Building
 model = RandomForestRegressor(n_estimators=300, random_state=42)
@@ -214,4 +186,4 @@ model.fit(X_train, y_train)
 # Make pickle file of our model
 pickle.dump(model, open("model.pkl", "wb"))
 
-print(df.columns)
+
