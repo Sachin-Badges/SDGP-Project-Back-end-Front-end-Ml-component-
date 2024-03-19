@@ -46,6 +46,8 @@ const ProfilePage = () => {
           <div className="bg-white bg-opacity-5 border border-silver p-4 rounded-lg">
             <div className="flex items-center justify-center mb-5">
               {/* <svg className="w-24 text-white" data-slot="icon" fill="none" strokeWidth="2.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> */}
+
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <svg
                 className="w-24 text-white"
                 data-slot="icon"
@@ -161,10 +163,10 @@ const ProfilePage = () => {
               </h1>
               <p className="description text-lg">
                 You can view all of the relevant details linked with the email
-                you received. Explore detailed information such as the sender's
-                name, delivery date, and any further details. This allows you to
-                find important information about your mails even before they
-                reach your door.
+                you received. Explore detailed information such as the
+                sender&apos;s name, delivery date, and any further details. This
+                allows you to find important information about your mails even
+                before they reach your door.
               </p>
             </div>
           </div>
