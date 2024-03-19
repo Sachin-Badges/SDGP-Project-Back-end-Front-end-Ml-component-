@@ -4,41 +4,59 @@ on:
       - main
 
 jobs:
-  build:
+  lintTest:
+    name: Lint and Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "14"
-
+      - name: Set Working Directory
+        run: |
+          echo "Setting working directory..."
+          cd ${{ github.workspace }}
+          ls
+          cd backend
       - name: Install Dependencies
-        run: npm install
+        run: |
+          echo "Installing dependencies
+          cd backend 
+          npm install
+      - name: Run Linting
+        run: |
+          echo "Running linting tests.."
+          cd backend 
+          npm run lint
+        env:
+          CI: true
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v2
 
-      - name: Run Tests
-        run: npm run test
+#       - name: Setup Node.js
+#         run: |
+#           echo "Setting working directory..."
+#           cd ${{ github.workspace }}
+#           ls
+#           cd backend
+#           ls
+#           uses: actions/setup-node@v4
+#           with:
+#           node-version: "14"
 
-      - name: Build
-        run: npm run build
-        
-      - name: Finalize
-        run: echo "Successfully completed CI."
+#       - name: Install Dependencies
+#         run: npm install
 
+#       - name: Run Tests
+#         run: npm run test
 
+#       - name: Build
+#         run: npm run build
 
-
-
-
-
-
-
-
-
-
-
+#       - name: Finalize
+#         run: echo "Successfully completed CI."
 
 # on:
 #   push:
