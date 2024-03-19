@@ -38,13 +38,15 @@ jobs:
       #     npm test
       - name: Build
         run: |
-          eco "Building dependencies.."
+          echo "Building dependencies.."
           ls
           cd backend 
           npm run build
+      - name: Finalize
+        run: |
+          echo "Successfully completed CI."
         env:
           CI: true
-# jobs:
 #   build:
 #     runs-on: ubuntu-latest
 #     steps:
