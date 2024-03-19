@@ -1,108 +1,101 @@
-/* 
-.button{
-    color: white;
-    width: 150px;
-    height: 30px;
-    box-sizing: 0 0 5px #530b0b,
-    0 0 20px #530b0b;
-    background-color:#530b0b;
-    text-align: center;
-    text-shadow: 0cap;
-    font-weight: bold;
-    font-size: medium;
-    font-style: italic;
-
+.button {
+  color: white;
+  width: 150px;
+  height: 30px;
+  box-sizing: 0 0 5px #530b0b, 0 0 20px #530b0b;
+  background-color: #530b0b;
+  text-align: center;
+  text-shadow: 0cap;
+  font-weight: bold;
+  font-size: medium;
+  font-style: italic;
 }
-.button:hover{
-    box-shadow: 0 0 5px red, 0 0 25px  red, 0 0 50px  red,0 0 100px  red,0 0 200px  red,0 0 400px  red,0 0 800px  red;
+.button:hover {
+  box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
+    0 0 200px red, 0 0 400px red, 0 0 800px red;
 }
-.reg_heading{
-    text-align: center;
-    color:white;
-    background-color:#530b0b;
-    background-size: auto;
-    font-size: 25px;
+.reg_heading {
+  text-align: center;
+  color: white;
+  background-color: #530b0b;
+  background-size: auto;
+  font-size: 25px;
 }
-.reg_heading:hover{
-    box-shadow: 0 0 5px red, 0 0 25px  red, 0 0 50px  red,0 0 100px  red,0 0 200px  red,0 0 400px  red;
-
+.reg_heading:hover {
+  box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red,
+    0 0 200px red, 0 0 400px red;
 }
-.input_box{
-    width: 300px;
-    box-shadow: 0 0 5px #530b0b, 0 0 25px #530b0b, 0 0 50px #530b0b,0 0 100px  #530b0b;
-    
-
+.input_box {
+  width: 300px;
+  box-shadow: 0 0 5px #530b0b, 0 0 25px #530b0b, 0 0 50px #530b0b,
+    0 0 100px #530b0b;
 }
-.input_label{
-    font-weight: bold;
-    color: white;
-    
-    
-
+.input_label {
+  font-weight: bold;
+  color: white;
 }
-.main_heading{
- text-align: center;
- color:white;
- font-family:'Times New Roman', Times, serif;
- box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px  white,0 0 100px  white;
- font-size: 25px;
-
+.main_heading {
+  text-align: center;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 100px white;
+  font-size: 25px;
 }
-.Reg_des{
-    text-align: left;
-    font-weight: bold;
-    font-style: italic;
-    color:black;
-   
+.Reg_des {
+  text-align: left;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
 }
 
-.row{
-    height: 90%;
-    display: flex;
-    align-items: center;
+.row {
+  height: 90%;
+  display: flex;
+  align-items: center;
 }
-.col{
-    flex-basis: 50%;
-    
-}
-
-.heading{
-    font-weight: bold;
-    text-align: left;
-    color: red;
-    font-size: 30px;
-}
-.para{
-    color:white;
-    text-justify:distribute-all-lines;
+.col {
+  flex-basis: 50%;
 }
 
-.button2{
-    color: black;
-    width: 150px;
-    height: 30px;
-    box-sizing: 0 0 5px #530b0b,
-    0 0 20px #530b0b;
-    background-color:cyan;
-    text-align: center;
-    text-shadow: 0cap;
-    font-weight: bold;
-    font-size: medium;
-    font-style: italic;
-
+.heading {
+  font-weight: bold;
+  text-align: left;
+  color: red;
+  font-size: 30px;
 }
-.button2:hover{
-    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px  cyan,0 0 100px  cyan,0 0 200px  cyan,0 0 400px  cyan,0 0 800px  cyan;
+.para {
+  color: white;
+  text-justify: distribute-all-lines;
 }
 
-.background{
-    background-color: black;
+.button2 {
+  color: black;
+  width: 150px;
+  height: 30px;
+  box-sizing: 0 0 5px #530b0b, 0 0 20px #530b0b;
+  background-color: cyan;
+  text-align: center;
+  text-shadow: 0cap;
+  font-weight: bold;
+  font-size: medium;
+  font-style: italic;
 }
-.h5{color:black;
-background-color: red;
-font-weight:bold;
-font-size: 16px;}
-.p{
-color:black;
-background-color: red;
-font-size: 10px;} */
+.button2:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+    0 0 200px cyan, 0 0 400px cyan, 0 0 800px cyan;
+}
+
+.background {
+  background-color: black;
+}
+.h5 {
+  color: black;
+  background-color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+.p {
+  color: black;
+  background-color: red;
+  font-size: 10px;
+}
