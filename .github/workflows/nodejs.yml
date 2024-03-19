@@ -16,16 +16,24 @@ jobs:
           cd ${{ github.workspace }}
           ls
           cd backend
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
       - name: Install Dependencies
         run: |
           echo "Installing dependencies
+          ls
           cd backend 
           npm install
-      - name: Run Linting
+      - name: Run Tests
         run: |
-          echo "Running linting tests.."
+          echo "Running  test files.."
+          ls
           cd backend 
-          npm run lint
+          npm test
         env:
           CI: true
 # jobs:
