@@ -24,13 +24,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          echo "Installing dependencies
+          echo "Installing dependencies"
           ls
           cd backend 
           npm install
       - name: Run Tests
         run: |
-          echo "Running  test files.."
+          echo "Running test files.."
           ls
           cd backend 
           npm test
