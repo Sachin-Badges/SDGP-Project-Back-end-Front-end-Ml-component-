@@ -22,7 +22,6 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "ts-node": "^10.9.2"
+    "jest": "^29.7.0"
   }
 }
