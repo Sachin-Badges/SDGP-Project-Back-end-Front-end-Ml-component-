@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 from flask import Flask, request, jsonify
 
-# Create flask app
+
 # Create flask app
 app = Flask(__name__)
 
