@@ -1,10 +1,16 @@
+// The "use client" directive at the top of the file indicates that this module is client-side only.
+// It ensures that this module is only executed in the client-side environment when using Vercel's serverless functions.
+// This is important because certain code, such as accessing the window object or using browser-specific APIs, can only run on the client-side.
+// By including "use client", we ensure that this component will only be rendered and executed in the browser, not during server-side rendering.
+
 "use client";
 
-import styles from "./links.module.css";
-import NavLink from "./navLinks/navLink";
-import { useState } from "react";
-import Image from "next/image";
+import styles from "./links.module.css"; // Import styles for links component
+import NavLink from "./navLinks/navLink"; // Import NavLink component
+import { useState } from "react"; // Import useState hook
+import Image from "next/image"; // Import Image component from Next.js
 
+// Define an array of navigation links
 const links = [
   {
     title: "HomePage",
@@ -24,9 +30,11 @@ const links = [
   },
 ];
 
+// Define the Links component
 const Links = ({}) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // Define state to track if mobile menu is open
 
+  // Render the container div with the specified CSS class
   return (
     <div className={styles.container}>
       <div className={styles.links}>
