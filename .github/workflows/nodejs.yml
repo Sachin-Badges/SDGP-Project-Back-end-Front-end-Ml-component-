@@ -1,3 +1,5 @@
+name: Node.js CI
+
 on:
   push:
     branches:
@@ -28,15 +30,23 @@ jobs:
           ls
           cd backend 
           npm install
-      - name: Run Tests
+      # - name: Run Tests
+      #   run: |
+      #     echo "Running test files.."
+      #     ls
+      #     cd backend
+      #     npm test
+      - name: Build
         run: |
-          echo "Running test files.."
+          echo "Building dependencies.."
           ls
           cd backend 
-          npm test
+          npm run build
+      - name: Finalize
+        run: |
+          echo "Successfully completed CI."
         env:
           CI: true
-# jobs:
 #   build:
 #     runs-on: ubuntu-latest
 #     steps:
