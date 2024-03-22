@@ -27,7 +27,7 @@ mongoose.connect(
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", function () {
-  console.log("Connected to MongoDB");
+  console.log("Connected to MongoDB and back-end is working properly.");
 });
 
 var app = express();
