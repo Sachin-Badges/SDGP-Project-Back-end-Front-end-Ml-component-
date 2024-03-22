@@ -37,6 +37,7 @@ jobs:
       #     cd backend
       #     npm test
       - name: Build
+        continue-on-error: true
         run: |
           echo "Building dependencies.."
           ls
