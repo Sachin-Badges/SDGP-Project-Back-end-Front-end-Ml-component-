@@ -5,6 +5,7 @@ import Navbar from "../customerPage/customerNavbar/Navbar";
 import Image from "next/image";
 import axios from "axios";
 import img3 from "../../../public/details.png";
+import dynamic from "next/dynamic";
 
 const ProfilePage = () => {
   const [userData, setUserData] = useState({
@@ -176,4 +177,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default dynamic(() => Promise.resolve(ProfilePage), { ssr: false });

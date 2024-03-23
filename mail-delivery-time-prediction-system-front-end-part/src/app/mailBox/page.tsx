@@ -135,4 +135,4 @@ const MailBox = () => {
   );
 };
 
-export default MailBox;
+export default dynamic(() => Promise.resolve(MailBox), { ssr: false });

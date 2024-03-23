@@ -98,7 +98,7 @@ const Home = () => {
               <h2>
                 Premium Package
                 <br />
-                <span>Available Now</span>
+                <span>Coming Soon!</span>
               </h2>
               <p>
                 In addition to the features of the Basic Package, the Premium
@@ -121,7 +121,7 @@ const Home = () => {
               <h2>
                 Business Package
                 <br />
-                <span>Available Now</span>
+                <span>Coming Soon!</span>
               </h2>
               <p>
                 This package could be tailored for businesses and include
@@ -143,7 +143,7 @@ const Home = () => {
               <h2>
                 Custom Package:
                 <br />
-                <span>Available Now</span>
+                <span>Coming Soon!</span>
               </h2>
               <p>
                 This package could allow customers to pick and choose the
@@ -215,116 +215,178 @@ const Home = () => {
       </div>
       <div className="p-4 pt-16 mt-1 rounded">
         <div className="mx-auto max-w-7xl">
-         <h2 className="items-center pb-10 mb-4 text-3xl font-bold text-center">Meet Our Team</h2>
+          <h2 className="items-center pb-10 mb-4 text-3xl font-bold text-center">
+            Meet Our Team
+          </h2>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
             <div className="member-card">
-              <img src="/sachin1.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
-                <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
-                  <h1>R. Sachin Ayeshmantha</h1>
-                  <div className="flex flex-col pl-4 ">
+              <img
+                src="/sachin1.jpg"
+                alt="Member 1"
+                className="object-cover w-full h-40 rounded lg:h-64"
+              />
+              <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
+                <h1>R. Sachin Ayeshmantha</h1>
+                <div className="flex flex-col pl-4 ">
+                  <div className="flex mt-4 space-x-4 text-white">
+                    <a
+                      href="https://www.facebook.com"
+                      className="hover:text-blue-500"
+                    >
+                      <FaFacebookSquare className="text-2xl" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      className="hover:text-pink-500"
+                    >
+                      <FaInstagram className="text-2xl" />
+                    </a>
+                    <a
+                      href="mailto:example@example.com"
+                      className="hover:text-green-900"
+                    >
+                      <FaEnvelope className="text-2xl" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="member-card">
+              <img
+                src="/princely.jpg"
+                alt="Member 1"
+                className="object-cover w-full h-40 rounded lg:h-64"
+              />
+              <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
+                <h1>W.M.P.S Fernando</h1>
+                <div className="flex flex-col pl-4 ">
+                  <div className="flex mt-4 space-x-4 text-white">
+                    <a
+                      href="https://www.facebook.com"
+                      className="hover:text-blue-500"
+                    >
+                      <FaFacebookSquare className="text-2xl" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      className="hover:text-pink-500"
+                    >
+                      <FaInstagram className="text-2xl" />
+                    </a>
+                    <a
+                      href="mailto:example@example.com"
+                      className="hover:text-green-900"
+                    >
+                      <FaEnvelope className="text-2xl" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="member-card">
+              <img
+                src="/koojana.png"
+                alt="Member 1"
+                className="object-cover w-full h-40 rounded lg:h-64"
+              />
+              <div className="justify-center pl-10 mt-4 xt-white plspace-x-4">
+                <h1>Koojana Shakya</h1>
+                <div className="flex flex-col pl-2">
+                  <div className="flex mt-4 space-x-4 text-white">
+                    <a
+                      href="https://www.facebook.com"
+                      className="hover:text-blue-500"
+                    >
+                      <FaFacebookSquare className="text-2xl" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      className="hover:text-pink-500"
+                    >
+                      <FaInstagram className="text-2xl" />
+                    </a>
+                    <a
+                      href="mailto:example@example.com"
+                      className="hover:text-green-900"
+                    >
+                      <FaEnvelope className="text-2xl" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="member-card">
+              <img
+                src="/thrisha.jpg"
+                alt="Member 1"
+                className="object-cover w-full h-40 rounded lg:h-64"
+              />
+              <div className="justify-center pl-16 mt-4 space-x-4 text-white">
+                <h1>K.Thirisani</h1>
+              </div>
+              <div className="flex flex-col pl-12">
                 <div className="flex mt-4 space-x-4 text-white">
-                  <a href="https://www.facebook.com" className="hover:text-blue-500">
-                  <FaFacebookSquare className="text-2xl" />
+                  <a
+                    href="https://www.facebook.com"
+                    className="hover:text-blue-500"
+                  >
+                    <FaFacebookSquare className="text-2xl" />
                   </a>
-          <a href="https://www.instagram.com" className="hover:text-pink-500">
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a href="mailto:example@example.com" className="hover:text-green-900">
-            <FaEnvelope className="text-2xl" />
-          </a>
+                  <a
+                    href="https://www.instagram.com"
+                    className="hover:text-pink-500"
+                  >
+                    <FaInstagram className="text-2xl" />
+                  </a>
+                  <a
+                    href="mailto:example@example.com"
+                    className="hover:text-green-900"
+                  >
+                    <FaEnvelope className="text-2xl" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="member-card">
+              <img
+                src="/samindi.jpg"
+                alt="Member 1"
+                className="object-cover w-full h-40 rounded lg:h-64"
+              />
+              <div className="justify-center pl-10 mt-4 space-x-4 text-white">
+                <h1>H.W.L.Samindani</h1>
+                <div className="flex flex-col ">
+                  <div className="flex mt-4 space-x-4 text-white">
+                    <a
+                      href="https://www.facebook.com"
+                      className="hover:text-blue-500"
+                    >
+                      <FaFacebookSquare className="text-2xl" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com"
+                      className="hover:text-pink-500"
+                    >
+                      <FaInstagram className="text-2xl" />
+                    </a>
+                    <a
+                      href="mailto:example@example.com"
+                      className="hover:text-green-900"
+                    >
+                      <FaEnvelope className="text-2xl" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-
-  <div className="member-card">
-     <img src="/princely.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
-      <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
-      <h1>W.M.P.S Fernando</h1>
-      <div className="flex flex-col pl-4 ">
-        <div className="flex mt-4 space-x-4 text-white">
-          <a href="https://www.facebook.com" className="hover:text-blue-500">
-            <FaFacebookSquare className="text-2xl" />
-          </a>
-          <a href="https://www.instagram.com" className="hover:text-pink-500">
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a href="mailto:example@example.com" className="hover:text-green-900">
-            <FaEnvelope className="text-2xl" />
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <div className="member-card">
-      <img src="/koojana.png" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
-     <div className="justify-center pl-10 mt-4 xt-white plspace-x-4">
-      <h1>Koojana Shakya</h1>
-      <div className="flex flex-col pl-2">
-        <div className="flex mt-4 space-x-4 text-white">
-          <a href="https://www.facebook.com" className="hover:text-blue-500">
-            <FaFacebookSquare className="text-2xl" />
-          </a>
-          <a href="https://www.instagram.com" className="hover:text-pink-500">
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a href="mailto:example@example.com" className="hover:text-green-900">
-            <FaEnvelope className="text-2xl" />
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <div className="member-card">
-      <img src="/thrisha.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
-      <div className="justify-center pl-16 mt-4 space-x-4 text-white">
-      <h1>K.Thirisani</h1>
-     </div>
-      <div className="flex flex-col pl-12">
-        <div className="flex mt-4 space-x-4 text-white">
-          <a href="https://www.facebook.com" className="hover:text-blue-500">
-            <FaFacebookSquare className="text-2xl" />
-          </a>
-          <a href="https://www.instagram.com" className="hover:text-pink-500">
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a href="mailto:example@example.com" className="hover:text-green-900">
-            <FaEnvelope className="text-2xl" />
-          </a>
-        </div>
-      </div>
-    </div>
-
-    
-    
-
-    <div className="member-card">
-      <img src="/samindi.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
-      <div className="justify-center pl-10 mt-4 space-x-4 text-white">
-      <h1>H.W.L.Samindani</h1>
-      <div className="flex flex-col ">
-        <div className="flex mt-4 space-x-4 text-white">
-          <a href="https://www.facebook.com" className="hover:text-blue-500">
-            <FaFacebookSquare className="text-2xl" />
-          </a>
-          <a href="https://www.instagram.com" className="hover:text-pink-500">
-            <FaInstagram className="text-2xl" />
-          </a>
-          <a href="mailto:example@example.com" className="hover:text-green-900">
-            <FaEnvelope className="text-2xl" />
-          </a>
-        </div>
-      </div>
-      </div>
-   </div>
-  </div>
-  </div>
-</div>
-
-     </>
+    </>
   );
- };
-
- export default Home; 
+};
+export default dynamic(() => Promise.resolve(Home), { ssr: false });

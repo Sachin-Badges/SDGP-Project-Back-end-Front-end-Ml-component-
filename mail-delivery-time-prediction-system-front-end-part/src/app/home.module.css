@@ -72,7 +72,8 @@
 
 /*aboutus */
 .container_2 {
-  margin-top: 100px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   display: flex;
   gap: 100px;
 }
@@ -85,16 +86,19 @@
 }
 
 .subtitle_2 {
-  color: #d56f6f;
+  color: #ffffff;
   font-size: 40px;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 100px;
   /* Replace #ff0000 with your desired color */
-  text-decoration: underline;
+  /* text-decoration: underline; */
   /* text-decoration-color: #e4d7d7; */
 }
 
 .title_2 {
   font-size: 54px;
+  color: #e6f98f;
 }
 
 .desc {
@@ -147,10 +151,9 @@
   margin-top: 100px;
   margin-bottom: 70px;
   text-align: center;
-  color: #d56f6f;
+  color: #fdfdfd;
   font-size: 50px;
   font-weight: 700;
-  text-decoration: underline;
 }
 
 .container_3 {
@@ -171,7 +174,7 @@
   align-items: flex-start;
   width: 400px;
   height: 450px;
-  background: #dee0e4;
+  background: #424346;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
@@ -217,17 +220,18 @@
   height: 270px;
 }
 .container_3 .card .content h2 {
-  margin-top: 20px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
+  margin-top: 0px;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: rgb(255, 215, 0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Apply text shadow for a shiny effect */
 }
 .container_3 .card .content h2 span {
   color: #b6154d;
   font-size: 1.5rem;
 }
 .container_3 .card .content p {
-  color: #6a6363;
+  color: #ffffff;
   font-size: 20px;
 }
 
