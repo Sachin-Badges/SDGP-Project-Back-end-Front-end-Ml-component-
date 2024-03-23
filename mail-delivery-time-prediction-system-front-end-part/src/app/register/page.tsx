@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -62,8 +62,8 @@ const Register = () => {
       <fieldset className={`bg-white bg-opacity-5 border border-silver p-4 rounded-lg `}>
         <form className="Reg_form" onSubmit={handleSubmit}>
           <h1 className={styles.reg_heading}>Registration Form</h1>
-          <div className="flex flex-wrap pt-10 justify-between">
-            <div className="w-full md:w-1/2 mb-4 md:pr-2">
+          <div className="flex flex-wrap justify-between pt-10">
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
               <label htmlFor="Username" className="text-white">
                 Username:
               </label>
@@ -74,7 +74,7 @@ const Register = () => {
                 className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
             </div>
-            <div className="w-full md:w-1/2 mb-4 md:pl-2">
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
               <label htmlFor="Customer_Longitude" className="text-white">
                 Customer Longitude:
               </label>
@@ -85,7 +85,7 @@ const Register = () => {
                 className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
             </div>
-            <div className="w-full md:w-1/2 mb-4 md:pr-2">
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
               <label htmlFor="Password" className="text-white">
                 Password:
               </label>
@@ -96,7 +96,7 @@ const Register = () => {
                 className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
             </div>
-            <div className="w-full md:w-1/2 mb-4 md:pl-2">
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
               <label htmlFor="Customer_Latitude" className="text-white">
                 Customer Latitude:
               </label>
@@ -129,7 +129,7 @@ const Register = () => {
                 className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
             </div>
-            <div className="w-full md:w-1/2 mb-4 md:pr-2">
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
               <label htmlFor="Contact" className="text-white">
                 Customer Contact Number:
               </label>
@@ -140,7 +140,7 @@ const Register = () => {
                 className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
             </div>
-            <div className="w-full md:w-1/2 mb-4 md:pl-2">
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
               <label htmlFor="NIC" className="text-white">
                 NIC:
               </label>
@@ -264,6 +264,6 @@ const Register = () => {
     </div>
   );
 
-
+          }
 
 export default Register;
