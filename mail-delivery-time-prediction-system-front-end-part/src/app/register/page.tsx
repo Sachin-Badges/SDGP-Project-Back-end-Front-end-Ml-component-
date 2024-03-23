@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -7,31 +7,10 @@ import Link from "next/link";
 import { CgEnter } from "react-icons/cg";
 import { Covered_By_Your_Grace } from "next/font/google";
 import { transform } from "next/dist/build/swc";
-import Swal from "sweetalert2";
 
 const Register = () => {
   const [error, setError] = useState("");
   const router = useRouter();
-
-  const handleClick = () => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this details!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "Registered!",
-          text: "Your have registered successfully!.",
-          icon: "success",
-        });
-      }
-    });
-  };
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -40,12 +19,13 @@ const Register = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const email = formData.get("Email_Address") as string;
-    const password = formData.get("Password") as string;
-    const address = formData.get("Address") as string;
-    const mobile = formData.get("Contact") as string;
-    const latitude = formData.get("Customer_Latitude") as string;
-    const longitude = formData.get("Customer_Longitude") as string;
+    const email = formData.get('Email_Address') as string;
+    const password = formData.get('Password') as string;
+    const address = formData.get('Address') as string;
+    const mobile = formData.get('Contact') as string;
+    const latitude = formData.get('Customer_Latitude') as string;
+    const longitude = formData.get('Customer_Longitude') as string;
+  
 
     try {
       const res = await fetch("http://localhost:5000/users/register", {
@@ -59,7 +39,7 @@ const Register = () => {
           address,
           mobile,
           latitude,
-          longitude,
+          longitude
         }),
       });
       if (res.status === 400) {
@@ -75,163 +55,108 @@ const Register = () => {
     }
   };
 
-  // if (sessionStatus === "loading") {
-  //   return <h1>Loading...</h1>;
-  // }
-
   return (
     <div>
       <br />
       <br />
-      <fieldset
-        style={{
-          backgroundImage: 'url("/registration.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          borderRadius: 50,
-        }}
-        className="Form_Field"
-        color="red"
-      >
-        {" "}
+      <fieldset className={`bg-white bg-opacity-5 border border-silver p-4 rounded-lg `}>
         <form className="Reg_form" onSubmit={handleSubmit}>
-          <br />
-          <br />
-          <br />
-          <br />
           <h1 className={styles.reg_heading}>Registration Form</h1>
-          <br />
-          <br />
-          <br />
-          <div className="mb-3 mt-3">
-            <label htmlFor="Username" className={styles.input_label}>
-              &nbsp;&nbsp;&nbsp;Username :
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+          <div className="flex flex-wrap justify-between pt-10">
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
+              <label htmlFor="Username" className="text-white">
+                Username:
+              </label>
               <input
                 type="text"
-                name="Username"
-                className={styles.input_box}
                 placeholder="Enter your username"
-                style={{ color: "black" }}
+                name="Username"
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label htmlFor="Customer_Longitude" className={styles.input_label}>
-              &nbsp;&nbsp;&nbsp;Customer Longitude : &nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
+              <label htmlFor="Customer_Longitude" className="text-white">
+                Customer Longitude:
+              </label>
               <input
                 type="text"
                 placeholder="Enter Longitude"
                 name="Customer_Longitude"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            <br />
-            <br />
-            <br />
-            <label htmlFor="Password" className={styles.input_label}>
-              &nbsp;&nbsp;&nbsp;Password :
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
+              <label htmlFor="Password" className="text-white">
+                Password:
+              </label>
               <input
                 placeholder="Enter Password"
-                type="Password"
+                type="password"
                 name="Password"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label htmlFor="Customer_Latitude" className={styles.input_label}>
-              {" "}
-              Customer_Latitude :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+            </div>
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
+              <label htmlFor="Customer_Latitude" className="text-white">
+                Customer Latitude:
+              </label>
               <input
-                type="text"
                 placeholder="Enter Latitude"
+                type="text"
                 name="Customer_Latitude"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            <br />
-            <br />
-            <br />
-            <label htmlFor="Address" className={styles.input_label}>
-              &nbsp;&nbsp;&nbsp;&nbsp;Address :
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="w-full mb-4">
+              <label htmlFor="Address" className="text-white">
+                Address:
+              </label>
               <input
-                type="text"
                 placeholder="Enter your Address"
+                type="text"
                 name="Address"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label htmlFor="Email_Address" className={styles.input_label}>
-              {" "}
-              &nbsp;Email_Address : &nbsp;&nbsp; &nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="w-full mb-4">
+              <label htmlFor="Email_Address" className="text-white">
+                Email Address:
+              </label>
               <input
-                type="text"
                 placeholder="Enter your Email"
-                name="Email_Address"
-                className={styles.input_box}
-                style={{ color: "black" }}
-              />
-            </label>
-            <br />
-            <br />
-            <br />
-            <label htmlFor="Contact" className={styles.input_label}>
-              &nbsp;&nbsp;&nbsp;Customer Contact Number :{" "}
-              <input
                 type="text"
-                placeholder="Enter your contact number"
-                name="Contact"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                name="Email_Address"
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label htmlFor="NIC" className={styles.input_label}>
-              {" "}
-              &nbsp;NIC : &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="w-full mb-4 md:w-1/2 md:pr-2">
+              <label htmlFor="Contact" className="text-white">
+                Customer Contact Number:
+              </label>
               <input
+                placeholder="Enter your contact number"
+                type="text"
+                name="Contact"
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
+              />
+            </div>
+            <div className="w-full mb-4 md:w-1/2 md:pl-2">
+              <label htmlFor="NIC" className="text-white">
+                NIC:
+              </label>
+              <input
+                placeholder="Enter your NIC"
                 type="text"
                 name="NIC"
-                placeholder="Enter your NIC"
-                className={styles.input_box}
-                style={{ color: "black" }}
+                className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 w-full `}
               />
-            </label>
-            <br />
-            <br />
-            <br />
-            <br />
+            </div>
           </div>
-          <div>
-            &nbsp;&nbsp;&nbsp;
-            <button
-              type="submit"
-              className={styles.button}
-              onClick={() => handleClick()}
-            >
-              Register
-            </button>
-            <p className="text-red-600 text-[16px] mb-4">{error && error}</p>
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
+          <div className=" text-[16px] mb-4">{error && error}</div>
+          <button type="submit" className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 `}>Register</button>
         </form>
       </fieldset>
+
       <br />
       <br />
       <div className={styles.row}>
@@ -302,7 +227,7 @@ const Register = () => {
               See more
             </button>
           </div>
-
+  
           <div
             style={{
               backgroundImage: 'url("/img4d.jpg")',
@@ -339,42 +264,6 @@ const Register = () => {
     </div>
   );
 
-  // return (
-  //   <div className="flex min-h-screen flex-col items-center justify-between p-24">
-  //     <div className="bg-[#212121] p-8 rounded shadow-md w-96">
-  //       <h1 className="text-4xl text-center font-semibold mb-8">Register</h1>
-  //       <form onSubmit={handleSubmit}>
-  //         <input
-  //           type="text"
-  //           className="w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black"
-  //           placeholder="Email"
-  //           required
-  //         />
-  //         <input
-  //           type="password"
-  //           className="w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black"
-  //           placeholder="Password"
-  //           required
-  //         />
-  //         <button
-  //           type="submit"
-  //           className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-  //         >
-  //           {" "}
-  //           Register
-  //         </button>
-  //         <p className="text-red-600 text-[16px] mb-4">{error && error}</p>
-  //       </form>
-  //       <div className="text-center text-gray-500 mt-4">- OR -</div>
-  //       <Link
-  //         className="block text-center text-blue-500 hover:underline mt-2"
-  //         href="/login"
-  //       >
-  //         Login with an existing account
-  //       </Link>
-  //     </div>
-  //   </div>
-  // );
-};
+          }
 
 export default Register;
