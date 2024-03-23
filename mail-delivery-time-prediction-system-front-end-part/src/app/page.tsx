@@ -6,6 +6,7 @@ import ProjectsSection from "./ProjectsSection";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import dynamic from "next/dynamic";
+import { FaEnvelope, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Home = () => {
   const isLocalStorageAvailable =
@@ -59,43 +60,6 @@ const Home = () => {
           />
         </div>
       </div>
-
-      <div className={styles.container_2}>
-        <div className={styles.textContainer_2}>
-          <h2 className={styles.subtitle_2}>About&nbsp; Us</h2>
-          <h1 className={styles.title_2}>
-            We create digital ideas that are bigger, bolder, braver and better.
-          </h1>
-          <p className={styles.desc}>
-            We are a group of students currently pursuing B.Sc.(Hons) in
-            Computer Science degree at Informatics Institute of Technology, Sri
-            Lanka affiliated with University of Westminster, UK.
-          </p>
-          <div className={styles.boxes}>
-            <div className={styles.box}>
-              <h1>10 K+</h1>
-              <p>Year of experience</p>
-            </div>
-            <div className={styles.box}>
-              <h1>10 K+</h1>
-              <p>Year of experience</p>
-            </div>
-            <div className={styles.box}>
-              <h1>10 K+</h1>
-              <p>Year of experience</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.imgContainer}>
-          <Image
-            src="/about.png"
-            alt="About Image"
-            fill
-            className={styles.img}
-          />
-        </div>
-      </div>
-
       <div className={styles.packages}>
         <h1>Packages</h1>
         <div className={styles.container_3}>
@@ -214,8 +178,153 @@ const Home = () => {
       </div>
 
       <ProjectsSection />
-    </>
-  );
-};
+      <div className={styles.container_2}>
+        <div className={styles.textContainer_2}>
+          <h2 className={styles.subtitle_2}>About&nbsp; Us</h2>
+          <h1 className={styles.title_2}>
+            We create digital ideas that are bigger, bolder, braver and better.
+          </h1>
+          <p className={styles.desc}>
+            We are a group of students currently pursuing B.Sc.(Hons) in
+            Computer Science degree at Informatics Institute of Technology, Sri
+            Lanka affiliated with University of Westminster, UK.
+          </p>
+          <div className={styles.boxes}>
+            <div className={styles.box}>
+              <h1>100%</h1>
+              <p>Accurate</p>
+            </div>
+            <div className={styles.box}>
+              <h1>100%</h1>
+              <p>User-friendly</p>
+            </div>
+            <div className={styles.box}>
+              <h1>100%</h1>
+              <p>Cost-effective </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.imgContainer}>
+          <Image
+            src="/about.png"
+            alt="About Image"
+            fill
+            className={styles.img}
+          />
+        </div>
+      </div>
+      <div className="p-4 pt-16 mt-1 rounded">
+        <div className="mx-auto max-w-7xl">
+         <h2 className="items-center pb-10 mb-4 text-3xl font-bold text-center">Meet Our Team</h2>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
+            <div className="member-card">
+              <img src="/sachin1.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
+                <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
+                  <h1>R. Sachin Ayeshmantha</h1>
+                  <div className="flex flex-col pl-4 ">
+                <div className="flex mt-4 space-x-4 text-white">
+                  <a href="https://www.facebook.com" className="hover:text-blue-500">
+                  <FaFacebookSquare className="text-2xl" />
+                  </a>
+          <a href="https://www.instagram.com" className="hover:text-pink-500">
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a href="mailto:example@example.com" className="hover:text-green-900">
+            <FaEnvelope className="text-2xl" />
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
 
-export default dynamic(() => Promise.resolve(Home), { ssr: false });
+  <div className="member-card">
+     <img src="/princely.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
+      <div className="justify-center pl-10 mt-4 t-white pl-space-x-4">
+      <h1>W.M.P.S Fernando</h1>
+      <div className="flex flex-col pl-4 ">
+        <div className="flex mt-4 space-x-4 text-white">
+          <a href="https://www.facebook.com" className="hover:text-blue-500">
+            <FaFacebookSquare className="text-2xl" />
+          </a>
+          <a href="https://www.instagram.com" className="hover:text-pink-500">
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a href="mailto:example@example.com" className="hover:text-green-900">
+            <FaEnvelope className="text-2xl" />
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div className="member-card">
+      <img src="/koojana.png" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
+     <div className="justify-center pl-10 mt-4 xt-white plspace-x-4">
+      <h1>Koojana Shakya</h1>
+      <div className="flex flex-col pl-2">
+        <div className="flex mt-4 space-x-4 text-white">
+          <a href="https://www.facebook.com" className="hover:text-blue-500">
+            <FaFacebookSquare className="text-2xl" />
+          </a>
+          <a href="https://www.instagram.com" className="hover:text-pink-500">
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a href="mailto:example@example.com" className="hover:text-green-900">
+            <FaEnvelope className="text-2xl" />
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div className="member-card">
+      <img src="/thrisha.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
+      <div className="justify-center pl-16 mt-4 space-x-4 text-white">
+      <h1>K.Thirisani</h1>
+     </div>
+      <div className="flex flex-col pl-12">
+        <div className="flex mt-4 space-x-4 text-white">
+          <a href="https://www.facebook.com" className="hover:text-blue-500">
+            <FaFacebookSquare className="text-2xl" />
+          </a>
+          <a href="https://www.instagram.com" className="hover:text-pink-500">
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a href="mailto:example@example.com" className="hover:text-green-900">
+            <FaEnvelope className="text-2xl" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    
+    
+
+    <div className="member-card">
+      <img src="/samindi.jpg" alt="Member 1" className="object-cover w-full h-40 rounded lg:h-64" />
+      <div className="justify-center pl-10 mt-4 space-x-4 text-white">
+      <h1>H.W.L.Samindani</h1>
+      <div className="flex flex-col ">
+        <div className="flex mt-4 space-x-4 text-white">
+          <a href="https://www.facebook.com" className="hover:text-blue-500">
+            <FaFacebookSquare className="text-2xl" />
+          </a>
+          <a href="https://www.instagram.com" className="hover:text-pink-500">
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a href="mailto:example@example.com" className="hover:text-green-900">
+            <FaEnvelope className="text-2xl" />
+          </a>
+        </div>
+      </div>
+      </div>
+   </div>
+  </div>
+  </div>
+</div>
+
+     </>
+  );
+ };
+
+ export default Home; 
