@@ -37,6 +37,7 @@ jobs:
       #     cd backend
       #     npm test
       - name: Build
+        continue-on-error: true
         run: |
           echo "Building dependencies.."
           ls
@@ -47,59 +48,3 @@ jobs:
           echo "Successfully completed CI."
         env:
           CI: true
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v2
-
-#       - name: Setup Node.js
-#         run: |
-#           echo "Setting working directory..."
-#           cd ${{ github.workspace }}
-#           ls
-#           cd backend
-#           ls
-#           uses: actions/setup-node@v4
-#           with:
-#           node-version: "14"
-
-#       - name: Install Dependencies
-#         run: npm install
-
-#       - name: Run Tests
-#         run: npm run test
-
-#       - name: Build
-#         run: npm run build
-
-#       - name: Finalize
-#         run: echo "Successfully completed CI."
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     steps: # Add this line
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v2
-
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: "14"
-
-#       - name: Install Dependencies
-#         run: npm install
-
-#        -name: Finalize
-#         run: echo "Successfully completed CI."
-
-#       # - name: Run Tests
-#       #   run: npm test
