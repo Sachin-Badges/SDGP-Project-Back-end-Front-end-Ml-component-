@@ -213,6 +213,7 @@ const Home = () => {
           />
         </div>
       </div>
+
       <div className="p-4 pt-16 mt-1 rounded">
         <div className="mx-auto max-w-7xl">
           <h2 className="items-center pb-10 mb-4 text-3xl font-bold text-center">

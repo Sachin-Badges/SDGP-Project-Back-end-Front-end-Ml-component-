@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -7,8 +7,18 @@ import Link from "next/link";
 import { CgEnter } from "react-icons/cg";
 import { Covered_By_Your_Grace } from "next/font/google";
 import { transform } from "next/dist/build/swc";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const handleClick = () => {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "You have successfully registered",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
   const [error, setError] = useState("");
   const router = useRouter();
 
@@ -19,13 +29,12 @@ const Register = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const email = formData.get('Email_Address') as string;
-    const password = formData.get('Password') as string;
-    const address = formData.get('Address') as string;
-    const mobile = formData.get('Contact') as string;
-    const latitude = formData.get('Customer_Latitude') as string;
-    const longitude = formData.get('Customer_Longitude') as string;
-  
+    const email = formData.get("Email_Address") as string;
+    const password = formData.get("Password") as string;
+    const address = formData.get("Address") as string;
+    const mobile = formData.get("Contact") as string;
+    const latitude = formData.get("Customer_Latitude") as string;
+    const longitude = formData.get("Customer_Longitude") as string;
 
     try {
       const res = await fetch("http://localhost:5000/users/register", {
@@ -39,7 +48,7 @@ const Register = () => {
           address,
           mobile,
           latitude,
-          longitude
+          longitude,
         }),
       });
       if (res.status === 400) {
@@ -59,7 +68,9 @@ const Register = () => {
     <div>
       <br />
       <br />
-      <fieldset className={`bg-white bg-opacity-5 border border-silver p-4 rounded-lg `}>
+      <fieldset
+        className={`bg-white bg-opacity-5 border border-silver p-4 rounded-lg `}
+      >
         <form className="Reg_form" onSubmit={handleSubmit}>
           <h1 className={styles.reg_heading}>Registration Form</h1>
           <div className="flex flex-wrap justify-between pt-10">
@@ -153,7 +164,13 @@ const Register = () => {
             </div>
           </div>
           <div className=" text-[16px] mb-4">{error && error}</div>
-          <button type="submit" className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 `}>Register</button>
+          <button
+            type="submit"
+            className={`bg-white bg-opacity-5 border border-silver rounded-lg px-3 py-2 `}
+            onClick={handleClick}
+          >
+            Register
+          </button>
         </form>
       </fieldset>
 
@@ -227,7 +244,7 @@ const Register = () => {
               See more
             </button>
           </div>
-  
+
           <div
             style={{
               backgroundImage: 'url("/img4d.jpg")',
@@ -263,7 +280,6 @@ const Register = () => {
       </div>
     </div>
   );
-
-          }
+};
 
 export default Register;
