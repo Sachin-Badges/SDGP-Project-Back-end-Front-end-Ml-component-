@@ -1,3 +1,15 @@
+/* .container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+} */
+
 .container {
   height: 100px;
   display: flex;
@@ -8,4 +20,10 @@
 .logo {
   font-size: 30px;
   font-weight: bold;
+}
+
+.logoImg {
+  margin-top: 30px;
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }

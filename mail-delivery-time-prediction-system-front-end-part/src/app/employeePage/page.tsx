@@ -101,7 +101,7 @@ const EmployeePage = () => {
                   <input
                     type="text"
                     placeholder="Enter receiver address here"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4 bg-gray-800 text-white"
+                    className="w-full px-48 py-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-8 bg-gray-800 text-white"
                     value={searchInput}
                     onChange={handleInputChange}
                   />
@@ -122,11 +122,12 @@ const EmployeePage = () => {
                   <li
                     key={index}
                     style={{
-                      backgroundColor: "#f0f0f0", // Lighter background
+                      backgroundColor: "#ffe5ee", // Lighter background
                       color: "black", // Black font color
                       padding: "10px",
-                      margin: "10px 0",
-                      borderRadius: "5px",
+                      margin: "30px 0",
+                      borderRadius: "20px", // Colorful border radius
+                      border: "2px solid #FF5733", // Border color
                       fontSize: "16px",
                       lineHeight: "1.5",
                       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Softer shadow
@@ -158,7 +159,7 @@ const EmployeePage = () => {
                     textAlign: "center",
                   }}
                 >
-                  No users found.
+                  {/* No users found. */}
                 </p>
                 )
               </div>

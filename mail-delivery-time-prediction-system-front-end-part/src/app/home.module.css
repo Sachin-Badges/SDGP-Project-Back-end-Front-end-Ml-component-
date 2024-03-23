@@ -148,7 +148,7 @@
   margin-bottom: 100px;
 }
 .packages h1 {
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 70px;
   text-align: center;
   color: #fdfdfd;
@@ -174,7 +174,7 @@
   align-items: flex-start;
   width: 400px;
   height: 450px;
-  background: #424346;
+  background: #d2d3d4;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
@@ -219,19 +219,21 @@
   top: 130px;
   height: 270px;
 }
+
 .container_3 .card .content h2 {
   margin-top: 0px;
   font-size: 2.5rem;
   font-weight: 1000;
-  color: rgb(255, 215, 0);
+  color: rgb(255, 255, 255);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Apply text shadow for a shiny effect */
 }
+
 .container_3 .card .content h2 span {
   color: #b6154d;
   font-size: 1.5rem;
 }
 .container_3 .card .content p {
-  color: #ffffff;
+  color: #010101;
   font-size: 20px;
 }
 
