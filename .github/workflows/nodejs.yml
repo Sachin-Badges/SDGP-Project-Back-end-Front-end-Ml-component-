@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
       - name: Set Working Directory
         run: |
           echo "Setting working directory..."
@@ -30,12 +31,14 @@ jobs:
           ls
           cd backend 
           npm install
-      # - name: Run Tests
-      #   run: |
-      #     echo "Running test files.."
-      #     ls
-      #     cd backend
-      #     npm test
+
+      - name: Run Tests
+        run: |
+          echo "Running test files.."
+          ls
+          cd backend
+          npm test
+
       - name: Build
         continue-on-error: true
         run: |
@@ -43,6 +46,7 @@ jobs:
           ls
           cd backend 
           npm run build
+
       - name: Finalize
         run: |
           echo "Successfully completed CI."
