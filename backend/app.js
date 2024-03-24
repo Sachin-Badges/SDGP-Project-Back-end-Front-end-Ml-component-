@@ -1,5 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
+require("dotenv").config();
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -8,6 +9,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var employeesRouter = require("./routes/employees");
 var delivryRouter = require("./routes/delivery");
+var alertRouter = require("./routes/alert");
 const mongoose = require("mongoose");
 
 // Connect to MongoDB
@@ -47,6 +49,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/employees", employeesRouter);
 app.use("/delivery", delivryRouter);
+app.use("/alert", alertRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
