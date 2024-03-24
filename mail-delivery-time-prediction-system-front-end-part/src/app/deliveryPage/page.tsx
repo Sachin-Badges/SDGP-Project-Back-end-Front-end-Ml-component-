@@ -312,33 +312,37 @@ const DeliveryPage = () => {
                 />
 
                 <label
-                  htmlFor="Type of Vehicle"
+                  htmlFor="Type of Vehicle "
                   className="text-black col-span-1"
                 >
-                  Type of Vehicle:
+                  Type of Vehicle
+                  <br />
+                  (motorcycle =1, van=2, scoter=3):
                 </label>
-                {/* <input
+                <input
                   type="number"
-                  placeholder="Type of Vehicle"
+                  placeholder="Type of Vehicle "
                   name="Type_of_vehicle"
+                  min="1"
+                  max="3"
                   value={deliveryData.Type_of_vehicle}
                   style={{ color: "black" }}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
-                /> */}
-                <select
+                />
+                {/* <select
                   name="Type_of_vehicle"
                   value={deliveryData.Type_of_vehicle}
                   // onChange={handleInputChange}
                   onChange={handleSelectChange}
                   style={{ color: "black" }}
-                  defaultValue={2}
+                  // defaultValue={2}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
                 >
                   <option value={1}>Electric Scooter</option>
                   <option value={2}>Motorcycle</option>
                   <option value={3}>Scooter</option>
-                </select>
+                </select> */}
 
                 <label
                   htmlFor="multiple_deliveries"
@@ -346,19 +350,31 @@ const DeliveryPage = () => {
                 >
                   multiple_deliveries:
                 </label>
-                <input
-                  type="checkbox"
-                  name="multiple_deliveries"
-                  style={{ color: "black" }}
-                  checked={deliveryData.multiple_deliveries}
-                  onChange={(event) =>
-                    setDeliveryData({
-                      ...deliveryData,
-                      multiple_deliveries: event.target.checked,
-                    })
-                  }
-                  className="mr-2"
-                />
+                <div
+                  style={{
+                    backgroundColor: "blue",
+                    display: "inline-block",
+                    padding: "5px",
+                    borderRadius: "3px",
+                  }}
+                >
+                  <input
+                    type="checkbox"
+                    name="multiple_deliveries"
+                    style={{ color: "black", marginRight: "5px" }}
+                    checked={deliveryData.multiple_deliveries}
+                    onChange={(event) =>
+                      setDeliveryData({
+                        ...deliveryData,
+                        multiple_deliveries: event.target.checked,
+                      })
+                    }
+                  />
+                  <label htmlFor="multiple_deliveries">
+                    Multiple Deliveries
+                  </label>
+                </div>
+
                 <label htmlFor="Festival" className="text-black col-span-1">
                   Festival:
                 </label>

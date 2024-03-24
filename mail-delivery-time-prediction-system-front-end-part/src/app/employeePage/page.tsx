@@ -67,7 +67,7 @@ const EmployeePage = () => {
           <div className="col-span-12 place-self-start">
             <div className="flex items-center">
               <h1
-                className={`font-extrabold text-4xl sm:text-5xl lg:text-8xl lg:leading-normal relative ${styles.textLightBlueDarkBlue} ${styles.textOutlineWhite}`}
+                className={`font-extrabold text-3xl sm:text-4xl lg:text-6xl lg:leading-normal relative ${styles.textLightBlueDarkBlue} ${styles.textOutlineWhite}`}
               >
                 Mail
                 <br />
@@ -77,7 +77,7 @@ const EmployeePage = () => {
               </h1>
 
               {/* Image right next to the text */}
-              <div className="ml-4 rounded-full bg-[#181818] w-[626px] h-[481px] relative">
+              <div className="ml-8 rounded-full bg-[#181818] w-[450px] h-[400px] relative">
                 <Image
                   src={"/Employee1.png"}
                   alt="employee image"
@@ -118,50 +118,57 @@ const EmployeePage = () => {
               </div>
 
               <div style={{ marginTop: "20px" }}>
-                {searchResults.map((user, index) => (
-                  <li
-                    key={index}
-                    style={{
-                      backgroundColor: "#ffe5ee", // Lighter background
-                      color: "black", // Black font color
-                      padding: "10px",
-                      margin: "30px 0",
-                      borderRadius: "20px", // Colorful border radius
-                      border: "2px solid #FF5733", // Border color
-                      fontSize: "16px",
-                      lineHeight: "1.5",
-                      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Softer shadow
-                      cursor: "pointer", // Change cursor to pointer for better UX
-                    }}
-                    onClick={() =>
-                      handleClick(
-                        user.latitude,
-                        user.longitude ?? "15.25",
-                        user.email
-                      )
-                    }
-                  >
-                    <div>Email: {user.email}</div>
-                    <div>Address: {user.address}</div>
-                    <div>Mobile: {user.mobile}</div>
-                    <div>Latitude: {user.latitude}</div>
-                    <div>Longitude: {user.longitude}</div>
-                    {/* Optionally display createdAt and updatedAt */}
-                    {user.createdAt && <div>Created At: {user.createdAt}</div>}
-                    {user.updatedAt && <div>Updated At: {user.updatedAt}</div>}
-                  </li>
-                ))}
-                : (
-                <p
-                  style={{
-                    color: "black",
-                    fontSize: "16px",
-                    textAlign: "center",
-                  }}
-                >
-                  {/* No users found. */}
-                </p>
-                )
+                {searchResults.length > 0
+                  ? searchResults.map((user, index) => (
+                      <li
+                        key={index}
+                        style={{
+                          backgroundColor: "#ffe5ee", // Lighter background
+                          color: "black", // Black font color
+                          padding: "10px",
+                          margin: "30px 0",
+                          borderRadius: "20px", // Colorful border radius
+                          border: "2px solid #FF5733", // Border color
+                          fontSize: "16px",
+                          lineHeight: "1.5",
+                          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // Softer shadow
+                          cursor: "pointer", // Change cursor to pointer for better UX
+                        }}
+                        onClick={() =>
+                          handleClick(
+                            user.latitude,
+                            user.longitude ?? "15.25",
+                            user.email
+                          )
+                        }
+                      >
+                        <div>Email: {user.email}</div>
+                        <div>Address: {user.address}</div>
+                        <div>Mobile: {user.mobile}</div>
+                        <div>Latitude: {user.latitude}</div>
+                        <div>Longitude: {user.longitude}</div>
+                        {/* Optionally display createdAt and updatedAt */}
+                        {user.createdAt && (
+                          <div>Created At: {user.createdAt}</div>
+                        )}
+                        {user.updatedAt && (
+                          <div>Updated At: {user.updatedAt}</div>
+                        )}
+                      </li>
+                    ))
+                  : searchInput && (
+                      <p
+                        style={{
+                          color: "red",
+                          fontSize: "16px",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          marginTop: "20px",
+                        }}
+                      >
+                        No customers found.
+                      </p>
+                    )}
               </div>
 
               {/* Additional Image right next to the search bar */}
