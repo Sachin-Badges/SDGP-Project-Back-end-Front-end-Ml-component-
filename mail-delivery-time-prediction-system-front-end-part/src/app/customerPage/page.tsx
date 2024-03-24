@@ -4,7 +4,6 @@ import Image from "next/image";
 import RootLayout from "../layout";
 import Navbar from "./customerNavbar/Navbar";
 import dynamic from "next/dynamic";
-
 import Link from "next/link";
 
 const DynamicNavbar = dynamic(() => import("./customerNavbar/Navbar"), {
@@ -18,48 +17,17 @@ const CustomerPage = () => {
       <DynamicNavbar />
       {/* <Navbar /> */}
       <section className="lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-12">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-y-8">
           <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
-            {/* <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-              Hi There! Welcome to the Customer Page
-            </h1> */}
-            <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+            <h1 className="text-white mb-2 text-6xl sm:text-7xl lg:text-8xl font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">
                 Hello There! Welcome to {" Customer Page"}
               </span>
-              {/* <TypeAnimation
-                sequence={[
-                  "Judy",
-                  1000,
-                  "Web Developer",
-                  1000,
-                  "Mobile Developer",
-                  1000,
-                  "UI/UX Designer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "2em", display: "inline-block" }}
-                repeat={Infinity}
-              /> */}
             </h1>
 
-            <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+            <p className="text-[#ADB7BE] text-base sm:text-lg mb-8 lg:text-xl">
               This webpage has been created by CS g 26 Team 2024
             </p>
-          </div>
-          <div className="col-span-5 place-self-center">
-            <div className="hidden lg:block rounded-full bg-[#181818] w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] relative">
-              <Image
-                // src="./../../../public/hero.png"
-                src={"/customer4.jpeg"}
-                alt="hero image"
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                width={400}
-                height={400}
-              />
-            </div>
             <div className="hidden lg:block">
               <Link
                 href="/"
@@ -76,6 +44,17 @@ const CustomerPage = () => {
                   Back to Home
                 </span>
               </Link>
+            </div>
+          </div>
+          <div className="col-span-5 place-self-center">
+            <div className="hidden lg:block rounded-full bg-[#181818] w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] relative">
+              <Image
+                src={"/customer4.jpeg"}
+                alt="hero image"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                width={350}
+                height={350}
+              />
             </div>
           </div>
         </div>

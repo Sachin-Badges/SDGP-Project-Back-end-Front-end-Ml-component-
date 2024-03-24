@@ -49,14 +49,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block   w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] relative">
+        <div className="hidden lg:block mt-4 w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] relative">
           <Image
             // src="./../../../public/hero.png"
             src={"/MainPostOffice.png"}
             alt="hero image"
-            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            width={600}
-            height={600}
+            className={`${styles.heroImage} absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2`}
+            width={525}
+            height={525}
           />
         </div>
       </div>

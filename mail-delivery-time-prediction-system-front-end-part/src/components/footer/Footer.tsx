@@ -11,7 +11,10 @@ const Footer = () => {
       {/* Footer Container */}
       <div className={styles.footerContainer}>
         {/* Main Footer Content */}
-        <div className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-10">
+        <div
+          className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-10"
+          style={{ transform: "scale(1.1)" }}
+        >
           {/* CS G-26 */}
           <div className="p-5">
             <ul>
@@ -89,8 +92,12 @@ const Footer = () => {
           </div>
         </div>
         {/* Footer Text */}
-        <div className={styles.footerText}>
-          <div className="flex flex-col justify-center items-center text-center p-3 bg-gray-50 w-full">
+
+        <div className={styles.footerText + " mt-4 mb-4"}>
+          <div
+            className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-10"
+            style={{ transform: "scale(1.1)" }}
+          >
             {/* Copyright and Attribution */}
             <h1 className="text-gray-800 font-semibold">
               ©2024 All rights reserved | Build by{" "}

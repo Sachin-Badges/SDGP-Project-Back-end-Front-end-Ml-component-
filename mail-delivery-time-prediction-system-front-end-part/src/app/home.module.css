@@ -1,7 +1,7 @@
 .container {
-  padding-top: 100px;
+  padding-top: 50px;
   display: flex;
-  gap: 100px;
+  gap: 50px;
 }
 
 .textContainer {
@@ -12,12 +12,12 @@
 }
 
 .title {
-  font-size: 90px;
+  font-size: 65px;
   font-weight: 700;
 }
 
 .desc {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .buttons {
@@ -43,10 +43,14 @@
 }
 
 .brands {
-  width: 500px;
+  width: 400px;
   height: 50px;
   position: relative;
   filter: grayscale(1);
+}
+
+.heroImage {
+  margin-top: -5rem; /* Adjust margin top as needed */
 }
 
 @media (max-width: 1024px) {
@@ -145,14 +149,14 @@
 
 /* Packages ------------------------------*/
 .packages {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .packages h1 {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   text-align: center;
   color: #fdfdfd;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -162,9 +166,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 100px 50px;
+  gap: 50px 50px;
 
-  padding: 50px 50px;
+  padding: 25px 25px;
 }
 
 .container_3 .card {
@@ -172,8 +176,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 400px;
-  height: 450px;
+  width: 300px;
+  height: 350px;
   background: #d2d3d4;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
@@ -185,8 +189,8 @@
 .container_3 .card .imgbx {
   position: absolute;
   top: 20px;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   background: #333;
   border-radius: 12px;
   overflow: hidden;
@@ -207,7 +211,7 @@
 }
 .container_3 .card .content {
   position: absolute;
-  top: 252px;
+  top: 200px;
   width: 100%;
   padding: 0 10px;
   height: 60px;
@@ -222,7 +226,7 @@
 
 .container_3 .card .content h2 {
   margin-top: 0px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 1000;
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Apply text shadow for a shiny effect */
@@ -230,11 +234,11 @@
 
 .container_3 .card .content h2 span {
   color: #b6154d;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .container_3 .card .content p {
   color: #010101;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .boldText {
