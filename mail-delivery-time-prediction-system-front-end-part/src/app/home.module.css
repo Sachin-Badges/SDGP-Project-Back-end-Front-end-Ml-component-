@@ -1,9 +1,11 @@
+/* Styles for the main container */
 .container {
   padding-top: 50px;
   display: flex;
   gap: 50px;
 }
 
+/* Styles for text container within main container */
 .textContainer {
   flex: 1;
   display: flex;
@@ -11,20 +13,24 @@
   gap: 50px;
 }
 
+/* Styles for title */
 .title {
   font-size: 65px;
   font-weight: 700;
 }
 
+/* Styles for description */
 .desc {
   font-size: 16px;
 }
 
+/* Styles for buttons */
 .buttons {
   display: flex;
   gap: 20px;
 }
 
+/* Styles for individual button */
 .button {
   padding: 20px;
   min-width: 120px;
@@ -37,11 +43,13 @@
   color: #000;
 }
 
+/* Styles for first button */
 .button:first-child {
   background-color: white;
   color: #000;
 }
 
+/* Styles for brand images */
 .brands {
   width: 400px;
   height: 50px;
@@ -53,6 +61,7 @@
   margin-top: -5rem; /* Adjust margin top as needed */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -64,6 +73,8 @@
   }
 }
 
+
+/* Media query for even smaller screens */
 @media (max-width: 768px) {
   .title {
     font-size: 64px;
@@ -135,6 +146,7 @@
   object-fit: contain;
 }
 
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
