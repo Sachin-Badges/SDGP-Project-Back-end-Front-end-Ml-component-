@@ -19,14 +19,21 @@ const CustomerPage = () => {
       <section className="lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-y-8">
           <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
-            <h1 className="text-white mb-2 text-6xl sm:text-7xl lg:text-8xl font-extrabold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">
-                Hello There! Welcome to {" Customer Page"}
+            
+            <h1 className="text-white mb-4 text-2xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 blocktext-5xl sm:text-7xl lg:text-7xl lg:leading-normal">
+                Hello There!
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 block text-5xl sm:text-7xl lg:text-6xl lg:leading-normal">
+                Welcome to 
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 block text-4xl sm:text-7xl lg:text-5xl lg:leading-normal">
+                Customer Page
               </span>
             </h1>
 
             <p className="text-[#ADB7BE] text-base sm:text-lg mb-8 lg:text-xl">
-              This webpage has been created by CS g 26 Team 2024
+              This webpage has been created by CS group 26 Team 2024
             </p>
             <div className="hidden lg:block">
               <Link
