@@ -4,6 +4,7 @@ import Image from "next/image";
 import RootLayout from "../layout";
 import Navbar from "./customerNavbar/Navbar";
 import dynamic from "next/dynamic";
+
 import Link from "next/link";
 
 const DynamicNavbar = dynamic(() => import("./customerNavbar/Navbar"), {
@@ -17,6 +18,7 @@ const CustomerPage = () => {
       <DynamicNavbar />
       {/* <Navbar /> */}
       <section className="lg:py-16">
+<<<<<<< Updated upstream
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-y-8">
           <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
             <h1 className="text-white mb-2 text-6xl sm:text-7xl lg:text-8xl font-extrabold">
@@ -29,6 +31,40 @@ const CustomerPage = () => {
               This webpage has been created by CS g 26 Team 2024
             </p>
             <div className="hidden lg:block">
+=======
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+          <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start mt-0 sm:mt-15">
+           
+            <h1 className="text-white mb-4 text-2xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 blocktext-5xl sm:text-7xl lg:text-7xl lg:leading-normal">
+                Hello There!
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 block text-4xl sm:text-7xl lg:text-5xl lg:leading-normal">
+                Welcome to 
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600 block text-3xl sm:text-7xl lg:text-4xl lg:leading-normal">
+                Customer Page
+              </span>
+            </h1>
+
+            <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+              This webpage has been created by CS group 26 Team 2024
+            </p>
+          </div>
+          <div className="col-span-5 place-self-center">
+            <div className="hidden lg:block rounded-full bg-[#181818] w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] relative">
+              <Image
+                // src="./../../../public/hero.png"
+                src={"/customer4.jpeg"}
+                alt="hero image"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                width={400}
+                height={400}
+              />
+            </div>
+           
+            <div className="hidden lg:block ">
+>>>>>>> Stashed changes
               <Link
                 href="/"
                 className="px-5 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-white text-black text-lg border border-black hover:bg-rose-500 hover:text-white transition-all"
@@ -45,6 +81,7 @@ const CustomerPage = () => {
                 </span>
               </Link>
             </div>
+<<<<<<< Updated upstream
           </div>
           <div className="col-span-5 place-self-center">
             <div className="hidden lg:block rounded-full bg-[#181818] w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] relative">
@@ -56,6 +93,9 @@ const CustomerPage = () => {
                 height={350}
               />
             </div>
+=======
+            
+>>>>>>> Stashed changes
           </div>
         </div>
       </section>
