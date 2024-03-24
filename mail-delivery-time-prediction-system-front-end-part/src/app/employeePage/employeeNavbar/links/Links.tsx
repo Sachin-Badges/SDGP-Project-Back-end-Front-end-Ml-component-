@@ -18,7 +18,10 @@ const links = [
     title: "Back-To-Main",
     path: "/",
   },
-
+  {
+    title: "Alert",
+    path: "/Alert",
+  },
   // {
   //   title: "Log-out",
   //   path: "/gallery",
