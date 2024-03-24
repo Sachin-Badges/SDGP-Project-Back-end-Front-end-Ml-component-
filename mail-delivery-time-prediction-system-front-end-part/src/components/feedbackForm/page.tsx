@@ -1,48 +1,47 @@
-"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import axios from 'axios';
 
 const FeedbackForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState("0");
   const [feedback, setFeedback] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const templateParams = {
-      name,
-      email,
-      message,
-      rating,
-      feedback,
-    };
-    emailjs
-      .send(
-        "YOUR_EMAIL_SERVICE_ID",
-        "YOUR_EMAIL_TEMPLATE_ID",
-        templateParams,
-        "YOUR_EMAIL_PUBLIC_KEY"
-      )
-      .then(
-        () => {
-          setShowSuccessMessage(true);
-          setName("");
-          setEmail("");
-          setMessage("");
-          setRating(0);
-          setFeedback("");
-        },
-        (error: any) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
 
-  return (
+    try {
+      const res = await axios.post("http://localhost:5000/users/feedback/", {
+        fullName: name,
+        email,
+        message,
+        rating,
+        opinion: feedback
+      });
+
+      if (res.status === 201) {
+        console.log("Success");
+        setShowSuccessMessage(true);
+
+        // Clear input fields after success
+        setName("");
+        setEmail("");
+        setMessage("");
+        setRating("0");
+        setFeedback("");
+      }
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+      setError("Error: Failed to submit feedback");
+    }
+};
+
+
+return (
     <div className="relative">
       <motion.form
         initial={{ opacity: 0, scale: 0.5 }}
@@ -100,16 +99,16 @@ const FeedbackForm = () => {
           <select
             id="rating"
             value={rating}
-            onChange={(e) => setRating(parseInt(e.target.value))}
-            className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:border-blue-500"
+            onChange={(e) => setRating(e.target.value)}
+            className="w-full p-2 border border-gray-400 rounded focus:outline-none text-black focus:border-blue-500"
             required
           >
-            <option value={0}>Select a rating</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
+            <option value="0">Select a rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
         <div className="mb-4">
@@ -120,7 +119,7 @@ const FeedbackForm = () => {
             id="feedback"
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
-            className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:border-blue-500"
+            className="w-full p-2 border border-gray-400 text-black rounded focus:outline-none focus:border-blue-500"
             rows={4}
           />
         </div>
@@ -131,6 +130,7 @@ const FeedbackForm = () => {
           Submit
         </button>
       </motion.form>
+      {/* Success message */}
       {showSuccessMessage && (
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -139,8 +139,8 @@ const FeedbackForm = () => {
           className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50"
         >
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
-            <p className="mb-4">Your feedback has been sent successfully.</p>
+            <h2 className="text-2xl font-bold mb-4 text-black">Thank you!</h2>
+            <p className="mb-4 text-black">Your feedback has been sent successfully.</p>
             <button
               className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
               onClick={() => setShowSuccessMessage(false)}
@@ -152,6 +152,8 @@ const FeedbackForm = () => {
       )}
     </div>
   );
+
+  
 };
 
 export default FeedbackForm;
