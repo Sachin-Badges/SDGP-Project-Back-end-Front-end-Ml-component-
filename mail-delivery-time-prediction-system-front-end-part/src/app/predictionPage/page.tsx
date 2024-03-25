@@ -159,6 +159,7 @@ const PredictionPage = () => {
               placeholder="Enter Sender Name"
               value={predictionData.sender_name}
               onChange={handleInputChange}
+              required
               className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
             />
 
@@ -175,6 +176,7 @@ const PredictionPage = () => {
               placeholder="Enter Delivery Person Name"
               value={predictionData.delivery_person_name}
               onChange={handleInputChange}
+              required
               className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
             />
 
@@ -191,6 +193,7 @@ const PredictionPage = () => {
               placeholder="Enter Delivery Person Contact"
               value={predictionData.delivery_person_contact}
               onChange={handleInputChange}
+              required
               className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
             />
 
@@ -207,6 +210,7 @@ const PredictionPage = () => {
               placeholder="Enter Received Date"
               value={predictionData.received_date}
               onChange={handleInputChange}
+              required
               className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 col-span-1"
             />
 
