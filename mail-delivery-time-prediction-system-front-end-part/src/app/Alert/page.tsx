@@ -51,6 +51,7 @@ const EmailForm = () => {
       <p className="text-white-700 mb-6">
         Customers should be alerted about mail delivery times to manage their
         expectations, plan their schedules effectively, and maintain flexibility
+<<<<<<< Updated upstream
         in receiving important packages. Such alerts not only enhance customer
         satisfaction by demonstrating proactive communication and consideration
         for their convenience but also enable prompt problem resolution in case
@@ -58,6 +59,10 @@ const EmailForm = () => {
         and building trust through transparent communication, companies can
         foster positive relationships with their customers and uphold a high
         standard of service quality.
+=======
+        in receiving important packages. So the System Notifies it through mail delivery time prediction.Use this imergency alert box to send imergency mail about 
+        delivery Delays because of wheather or any other emergency
+>>>>>>> Stashed changes
       </p>
       <form onSubmit={handleSubmit}>
         <input
