@@ -134,6 +134,7 @@ const DeliveryPage = () => {
                   min="18"
                   max="70"
                   onChange={handleInputChange}
+                  required
                   style={{ color: "black" }}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4 col-span-1"
                 />
@@ -241,6 +242,7 @@ const DeliveryPage = () => {
                   max="6"
                   style={{ color: "black" }}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
                 />
                 {/* <select
@@ -274,6 +276,7 @@ const DeliveryPage = () => {
                   value={deliveryData.Road_traffic_density}
                   style={{ color: "black" }}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
                 />
 
@@ -328,6 +331,7 @@ const DeliveryPage = () => {
                   value={deliveryData.Type_of_vehicle}
                   style={{ color: "black" }}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
                 />
                 {/* <select
@@ -396,6 +400,7 @@ const DeliveryPage = () => {
                       value={1}
                       checked={Number(deliveryData.Festival) === 1}
                       onChange={handleInputChange}
+                      required
                       className="mr-1"
                     />
                     <label htmlFor="festivalYes" className="text-black mr-4">
@@ -408,6 +413,7 @@ const DeliveryPage = () => {
                       value={0}
                       checked={Number(deliveryData.Festival) === 0}
                       onChange={handleInputChange}
+                      required
                     />
                     <label htmlFor="festivalNo" className="text-black">
                       No
@@ -425,6 +431,7 @@ const DeliveryPage = () => {
                   value={deliveryData.distance}
                   style={{ color: "black" }}
                   onChange={handleInputChange}
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 mb-4"
                 />
 
