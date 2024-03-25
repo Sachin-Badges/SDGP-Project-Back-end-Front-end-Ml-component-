@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import axios from 'axios';
+import axios from "axios";
+import dynamic from "next/dynamic";
 
 const FeedbackForm = () => {
   const [name, setName] = useState("");
@@ -20,7 +21,7 @@ const FeedbackForm = () => {
         email,
         message,
         rating,
-        opinion: feedback
+        opinion: feedback,
       });
 
       if (res.status === 201) {
@@ -38,10 +39,9 @@ const FeedbackForm = () => {
       console.error("Error submitting feedback:", error);
       setError("Error: Failed to submit feedback");
     }
-};
+  };
 
-
-return (
+  return (
     <div className="relative">
       <motion.form
         initial={{ opacity: 0, scale: 0.5 }}
@@ -140,7 +140,9 @@ return (
         >
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-black">Thank you!</h2>
-            <p className="mb-4 text-black">Your feedback has been sent successfully.</p>
+            <p className="mb-4 text-black">
+              Your feedback has been sent successfully.
+            </p>
             <button
               className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
               onClick={() => setShowSuccessMessage(false)}
@@ -152,8 +154,6 @@ return (
       )}
     </div>
   );
-
-  
 };
 
-export default FeedbackForm;
+export default dynamic(() => Promise.resolve(FeedbackForm), { ssr: false });
