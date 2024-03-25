@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .logoContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .contactDetails {
+    text-align: center;
+  }
+  
+  .contactList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contactList li {
+    margin-bottom: 1rem;
+  }
+  
+  .contactList li span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  
+
+  .contactImage {
+    position: relative;
+  }
+  
+  .logoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .contactText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+  }
+  
+  .blackText {
+    color: black;
+  }
+
+  .logoContainer {
+    position: relative;
+  }
+  
+  .logoOverlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .contactImage {
+    position: relative;
+  }
+  
+  .contactText {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .blackText {
+    color: black;
+  }
+
+  .boldText {
+    font-weight: bold;
+  }
+
+  .largeText {
+    font-size: 150%; /* Adjust the font size as needed */
+  }
+  

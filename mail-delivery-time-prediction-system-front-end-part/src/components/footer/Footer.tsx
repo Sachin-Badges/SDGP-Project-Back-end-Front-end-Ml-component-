@@ -73,9 +73,10 @@ const Footer = () => {
           <div className="p-5">
             <ul>
               <p className="text-gray-800 font-bold text-2xl pb-4">Support</p>
-              <li className="text-gray-500 text-lg pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                Contact
-              </li>
+              <li className={`${styles.footerLink} text-gray-500 text-lg pb-2 font-semibold cursor-pointer hover:text-blue-600`}>
+  <a href="/Contact">Contact</a>
+</li>
+
               <li className="text-gray-500 text-lg pb-2 font-semibold hover:text-blue-600 cursor-pointer">
                 Support Portals
               </li>
