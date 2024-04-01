@@ -76,7 +76,7 @@
 
 /*aboutus */
 .container_2 {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   gap: 100px;
@@ -91,10 +91,10 @@
 
 .subtitle_2 {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 100px;
+
   /* Replace #ff0000 with your desired color */
   /* text-decoration: underline; */
   /* text-decoration-color: #e4d7d7; */
@@ -102,7 +102,9 @@
 
 .title_2 {
   font-size: 54px;
-  color: #e6f98f;
+  color: #a96193;
+  font-family: "Roboto Slab", serif; /* Specify Roboto Slab as the font family */
+  font-style: italic; /* Set the font style to italic */
 }
 
 .desc {

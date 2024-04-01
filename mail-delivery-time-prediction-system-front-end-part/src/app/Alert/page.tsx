@@ -6,8 +6,9 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import Navbar from "../employeePage/employeeNavbar/Navbar";
+import dynamic from "next/dynamic";
 
-const EmailForm = () => {
+const AlertForm = () => {
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,45 +46,44 @@ const EmailForm = () => {
 
   return (
     <RootLayout hideNavbar={true}>
-       <Navbar />
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Alert</h1>
-      <p className="text-white-700 mb-6">
-        Customers should be alerted about mail delivery times to manage their
-        expectations, plan their schedules effectively, and maintain flexibility
-        in receiving important packages. Such alerts not only enhance customer
-        satisfaction by demonstrating proactive communication and consideration
-        for their convenience but also enable prompt problem resolution in case
-        of delays or issues with the delivery. By providing accurate information
-        and building trust through transparent communication, companies can
-        foster positive relationships with their customers and uphold a high
-        standard of service quality.
-      </p>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="Email_Address"
-          className="w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black"
-          placeholder="Email"
-          required
-        />
-        <textarea
-          name="Message"
-          className="w-full border border-gray-300 text-black rounded px-3 py-2 mb-4 focus:outline-none focus:border-blue-400 focus:text-black"
-          placeholder="Message"
-          required
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
-          Submit
-        </button>
-        <p className="text-red-600 text-[16px] mb-4">{error && error}</p>
-      </form>
-    </div>
+      <Navbar />
+      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <h1 className="text-4xl font-bold mb-8 text-center text-blue-600">
+          Alerts
+        </h1>
+
+        <p className="text-gray-700 leading-relaxed mb-6 text-justify">
+          If, for any reason, employees are unable to deliver mail within the
+          predicted timeframe, they can send an alert to the customers.
+          Additionally, if there are any important notices, the employees can
+          send alerts to the customers to keep them informed about any updates.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            name="Email_Address"
+            className="w-full border border-gray-300 text-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-400"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            name="Message"
+            className="w-full border border-gray-300 text-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-400"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+          >
+            Submit
+          </button>
+          {error && <p className="text-red-600 text-sm">{error}</p>}
+        </form>
+      </div>
     </RootLayout>
   );
 };
 
-export default EmailForm;
+export default dynamic(() => Promise.resolve(AlertForm), { ssr: false });
