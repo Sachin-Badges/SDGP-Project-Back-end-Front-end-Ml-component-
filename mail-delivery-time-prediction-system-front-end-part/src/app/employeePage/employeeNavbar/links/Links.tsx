@@ -15,27 +15,22 @@ const links = [
     path: "/employeePage",
   },
   {
-    title: "Back-To-Main",
-    path: "/",
-  },
-  {
     title: "Alert",
     path: "/Alert",
   },
-  // {
-  //   title: "Log-out",
-  //   path: "/gallery",
-  // },
+  {
+    title: "Back-To-Main",
+    path: "/",
+  },
 ];
 
 const Links = ({}) => {
   const [open, setOpen] = useState(false);
   const handleLogout = () => {
     // Clear user data from localStorage
-    localStorage.removeItem('user');
-    window.location.href = '/'; 
+    localStorage.removeItem("user");
+    window.location.href = "/";
   };
-
 
   return (
     <div className={styles.container}>
@@ -43,7 +38,9 @@ const Links = ({}) => {
         {links.map((link, index) => (
           <NavLink item={link} key={link.title} />
         ))}
-        <button className={styles.logout} onClick={handleLogout}>Logout</button>
+        <button className={styles.logout} onClick={handleLogout}>
+          Logout
+        </button>
       </div>
 
       <Image

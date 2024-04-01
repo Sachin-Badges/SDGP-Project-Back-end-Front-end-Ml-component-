@@ -182,7 +182,8 @@ const Home = () => {
         <div className={styles.textContainer_2}>
           <h2 className={styles.subtitle_2}>About&nbsp; Us</h2>
           <h1 className={styles.title_2}>
-            We create digital ideas that are bigger, bolder, braver and better.
+            We are ECS Association , we create digital ideas that are bigger,
+            bolder, braver and better.
           </h1>
           <p className={styles.desc}>
             We are a group of students currently pursuing B.Sc.(Hons) in
@@ -228,6 +229,15 @@ const Home = () => {
               />
               <div className="mt-4 text-center">
                 <h1 className="text-white">R. Sachin Ayeshmantha</h1>
+                <span className="block text-black italic font-bold text-lg font-roboto-slab">
+                  <h1>
+                    Project Manager
+                    <br />
+                    Machine Learning Engineer
+                    <br />
+                    DevOps Engineer
+                  </h1>
+                </span>
                 <div className="flex justify-center mt-4 space-x-4">
                   <a
                     href="https://www.facebook.com"
@@ -260,6 +270,9 @@ const Home = () => {
               />
               <div className="mt-4 text-center">
                 <h1 className="text-white">W.M.P.S Fernando</h1>
+                <span className="block text-black italic font-bold text-lg font-roboto-slab">
+                  <h1>Back-end Developer</h1>
+                </span>
                 <div className="flex justify-center mt-4 space-x-4">
                   <a
                     href="https://www.facebook.com"
@@ -356,6 +369,9 @@ const Home = () => {
               />
               <div className="mt-4 text-center">
                 <h1 className="text-white">H.W.L.Samindani</h1>
+                <span className="block text-black italic font-bold text-lg font-roboto-slab">
+                  <h1>Front-end Developer</h1>
+                </span>
                 <div className="flex justify-center mt-4 space-x-4">
                   <a
                     href="https://www.facebook.com"

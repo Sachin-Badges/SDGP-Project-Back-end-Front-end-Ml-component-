@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 const ProfilePage = () => {
   const [userData, setUserData] = useState({
-    email_id: "",
+    email: "",
     address: "",
     mobile: "",
     longitude: "",
@@ -42,10 +42,10 @@ const ProfilePage = () => {
     <RootLayout hideNavbar={true}>
       <Navbar />
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-14">
         <div className="w-full md:w-1/2 pr-5">
           <div className="bg-white bg-opacity-5 border border-silver p-4 rounded-lg">
-            <div className="flex items-center justify-center mb-5">
+            <div className="flex items-center justify-center mb-5 ">
               {/* <svg className="w-24 text-white" data-slot="icon" fill="none" strokeWidth="2.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> */}
 
               {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -66,89 +66,91 @@ const ProfilePage = () => {
                 ></path>
               </svg>
             </div>
-            <form className="max-w-md">
-              <div className="pb-5">
-                <label
-                  htmlFor="username"
-                  className="label text-black font-bold text-2xl"
-                >
-                  Username :
-                </label>
-                <input
-                  type="text"
-                  name="username"
-                  value={userData.email_id}
-                  className="input rounded bg-transparent border-b border-gray-300 w-full"
-                  readOnly
-                />
-              </div>
+            <form className="max-w-xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+              <div className="px-8 py-10">
+                <div className="mb-6">
+                  <label
+                    htmlFor="username"
+                    className="text-gray-700 font-bold text-xl mb-2 block"
+                  >
+                    Username:
+                  </label>
+                  <input
+                    type="text"
+                    name="username"
+                    value={userData.email}
+                    className="input rounded bg-gray-200 focus:outline-none focus:bg-white focus:border-rose-500 border-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+                    readOnly
+                  />
+                </div>
 
-              <div className="pb-5">
-                <label
-                  htmlFor="address"
-                  className="label text-black font-bold text-2xl"
-                >
-                  Address :
-                </label>
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  value={userData.address}
-                  className="input rounded bg-transparent border-b border-gray-300 w-full"
-                  readOnly
-                />
-              </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="address"
+                    className="text-gray-700 font-bold text-xl mb-2 block"
+                  >
+                    Address:
+                  </label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value={userData.address}
+                    className="input rounded bg-gray-200 focus:outline-none focus:bg-white focus:border-rose-500 border-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+                    readOnly
+                  />
+                </div>
 
-              <div className="pb-5">
-                <label
-                  htmlFor="mobile"
-                  className="label text-black font-bold text-2xl"
-                >
-                  Contact Number :
-                </label>
-                <input
-                  type="text"
-                  id="mobile"
-                  name="mobile"
-                  value={userData.mobile}
-                  className="input rounded bg-transparent border-b border-gray-300 w-full"
-                  readOnly
-                />
-              </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="mobile"
+                    className="text-gray-700 font-bold text-xl mb-2 block"
+                  >
+                    Contact Number:
+                  </label>
+                  <input
+                    type="text"
+                    id="mobile"
+                    name="mobile"
+                    value={userData.mobile}
+                    className="input rounded bg-gray-200 focus:outline-none focus:bg-white focus:border-rose-500 border-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+                    readOnly
+                  />
+                </div>
 
-              <div className="pb-5">
-                <label
-                  htmlFor="longitude"
-                  className="label text-black font-bold text-2xl"
-                >
-                  Longitude :
-                </label>
-                <input
-                  type="text"
-                  id="longitude"
-                  name="longitude"
-                  value={userData.longitude}
-                  className="input rounded bg-transparent border-b border-gray-300 w-full"
-                  readOnly
-                />
-              </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="longitude"
+                    className="text-gray-700 font-bold text-xl mb-2 block"
+                  >
+                    Longitude:
+                  </label>
+                  <input
+                    type="text"
+                    id="longitude"
+                    name="longitude"
+                    value={userData.longitude}
+                    className="input rounded bg-gray-200 focus:outline-none focus:bg-white focus:border-rose-500 border-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+                    readOnly
+                  />
+                </div>
 
-              <div className="pb-5">
-                <label
-                  htmlFor="latitude"
-                  className="label text-black font-bold text-2xl"
-                >
-                  Latitude :
-                </label>
-                <input
-                  type="text"
-                  id="latitude"
-                  name="latitude"
-                  value={userData.latitude}
-                  className="input rounded bg-transparent border-b border-gray-300 w-full"
-                  readOnly
-                />
+                <div className="mb-6">
+                  <label
+                    htmlFor="latitude"
+                    className="text-gray-700 font-bold text-xl mb-2 block"
+                  >
+                    Latitude:
+                  </label>
+                  <input
+                    type="text"
+                    id="latitude"
+                    name="latitude"
+                    value={userData.latitude}
+                    className="input rounded bg-gray-200 focus:outline-none focus:bg-white focus:border-rose-500 border-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+                    readOnly
+                  />
+                </div>
               </div>
             </form>
           </div>
